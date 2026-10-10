@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+
+# Secrets: the Anthropic key lives in the environment or a local .env
+.env
+
+# Data, indexes, model caches (re-create with rag-download / rag-index)
+data/*
+!data/.gitkeep
+models/*
+!models/.gitkeep
+outputs/
+
+# OS / editors
+.DS_Store
+.vscode/
+.idea/

@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "robotics-docs-rag"
+version = "1.0.0"
+description = "Ask the ROS 2 docs: PDF/RST ingestion, three chunking strategies, BM25 + dense hybrid search in Chroma, cross-encoder reranking and Claude answers with citations, evaluated with recall@k, MRR, nDCG and LLM-judged faithfulness."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Muhammad Haroon Khan" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "numpy>=1.26",
+    "pyyaml>=6",
+    "tqdm>=4.66",
+    "pypdf>=4",
+    "rank-bm25>=0.2.2",
+    "chromadb>=0.5",
+    "sentence-transformers>=3",
+    "torch>=2.2",
+    "anthropic>=1.0",
+    "python-dotenv>=1",
+    "fastapi>=0.110",
+    "uvicorn>=0.29",
+    "matplotlib>=3.8",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6", "httpx>=0.27"]
+
+[project.scripts]
+rag-download = "roborag.download:main"
+rag-index = "roborag.index:main"
+rag-ask = "roborag.ask:main"
+rag-check-eval = "roborag.evalset:main"
+rag-eval-retrieval = "roborag.evaluate_retrieval:main"
+rag-eval-answers = "roborag.evaluate_answers:main"
+rag-serve = "roborag.api:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+roborag = ["static/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+extend-exclude = ["outputs", "data", "models"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
