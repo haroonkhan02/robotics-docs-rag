@@ -1,0 +1,14 @@
+.git
+.github
+.venv
+.env
+data
+models
+outputs
+reports
+assets
+tests
+LEARNING.md
+REPORT.md
+REPORT.pdf
+**/__pycache__
