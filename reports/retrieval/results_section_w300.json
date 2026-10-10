@@ -1,0 +1,6587 @@
+{
+ "tag": "section_w300",
+ "embedding_model": "BAAI/bge-small-en-v1.5",
+ "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+ "chunking": {
+  "strategy": "section",
+  "max_words": 300,
+  "overlap_words": 40,
+  "section_header": true
+ },
+ "retrieval": {
+  "candidates": 30,
+  "rrf_k": 60,
+  "rerank_top": 30
+ },
+ "n_questions": 61,
+ "significance_vs_best": [
+  {
+   "best": "section/hybrid_rerank",
+   "other": "section/bm25",
+   "mrr_diff": 0.173,
+   "p_value": 0.0034
+  },
+  {
+   "best": "section/hybrid_rerank",
+   "other": "section/dense",
+   "mrr_diff": 0.078,
+   "p_value": 0.12
+  },
+  {
+   "best": "section/hybrid_rerank",
+   "other": "section/hybrid",
+   "mrr_diff": 0.098,
+   "p_value": 0.0398
+  }
+ ],
+ "results": [
+  {
+   "mode": "bm25",
+   "per_question": [
+    {
+     "id": "q01",
+     "category": "concept",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Intermediate/About-Domain-ID",
+      "Concepts/Intermediate/About-Domain-ID",
+      "Concepts/Intermediate/About-Domain-ID",
+      "Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment",
+      "Tutorials/Advanced/Creating-An-RMW-Implementation"
+     ],
+     "latency_ms": 1.74
+    },
+    {
+     "id": "q02",
+     "category": "concept",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Intermediate/About-Quality-of-Service-Settings",
+      "Concepts/Intermediate/About-Quality-of-Service-Settings",
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics",
+      "Tutorials/Demos/Wait-for-Acknowledgment",
+      "Concepts/Basic/Interfaces-Topics-Services-Actions"
+     ],
+     "latency_ms": 1.55
+    },
+    {
+     "id": "q03",
+     "category": "concept",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": null,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Installation/Alternatives/macOS-Development-Setup",
+      "How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio",
+      "Concepts/Basic/About-Topics",
+      "The-ROS2-Project/Contributing/Developer-Guide",
+      "Tutorials/Advanced/Simulators/MVSim/Getting-Started-MVSim"
+     ],
+     "latency_ms": 1.2
+    },
+    {
+     "id": "q04",
+     "category": "concept",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Basic/About-Services",
+      "Concepts/Basic/About-Nodes",
+      "Concepts/Basic/About-Services",
+      "Concepts/Basic/About-Interfaces",
+      "Tutorials/Intermediate/Testing/Testing-Main"
+     ],
+     "latency_ms": 1.72
+    },
+    {
+     "id": "q05",
+     "category": "concept",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true
+     ],
+     "first_relevant_rank": 10,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Intermediate/Writing-an-Action-Server-Client/Py",
+      "Tutorials/Intermediate/Creating-an-Action",
+      "The-ROS2-Project/Contributing/Contributing-To-ROS-2-Documentation",
+      "Releases/Release-Iron-Irwini",
+      "Tutorials/Intermediate/Creating-an-Action"
+     ],
+     "latency_ms": 0.58
+    },
+    {
+     "id": "q06",
+     "category": "concept",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 6,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "pdf/ros2-design-architecture-uses",
+      "Concepts/Basic/About-Topics",
+      "Concepts/Basic",
+      "Releases/Release-Lyrical-Luth",
+      "Concepts/Basic/About-Topics"
+     ],
+     "latency_ms": 1.02
+    },
+    {
+     "id": "q07",
+     "category": "concept",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 6,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters",
+      "Releases/Release-Dashing-Diademata",
+      "Releases/Release-Dashing-Diademata",
+      "Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Cpp-Publisher-And-Subscriber",
+      "Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Py-Publisher-And-Subscriber"
+     ],
+     "latency_ms": 1.37
+    },
+    {
+     "id": "q08",
+     "category": "concept",
+     "rels": [
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 2,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Advanced/Discovery-Server/Discovery-Server",
+      "Concepts/Basic/About-Discovery",
+      "The-ROS2-Project/Contributing/Build-Farms",
+      "Concepts/Basic/About-Nodes",
+      "Tutorials/Intermediate/Launch/Launch-Main"
+     ],
+     "latency_ms": 1.16
+    },
+    {
+     "id": "q09",
+     "category": "concept",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 5,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "How-To-Guides/Using-callback-groups",
+      "How-To-Guides/Using-callback-groups",
+      "How-To-Guides/Using-callback-groups",
+      "How-To-Guides/Using-callback-groups",
+      "Concepts/Intermediate/About-Executors"
+     ],
+     "latency_ms": 1.1
+    },
+    {
+     "id": "q10",
+     "category": "concept",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": null,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Releases/Release-Lyrical-Luth",
+      "Tutorials/Demos/Logging-and-logger-configuration",
+      "Tutorials/Demos/Logging-and-logger-configuration",
+      "Tutorials/Demos/Logging-and-logger-configuration",
+      "Releases/Release-Galactic-Geochelone"
+     ],
+     "latency_ms": 0.82
+    },
+    {
+     "id": "q11",
+     "category": "concept",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Intermediate/About-Composition",
+      "Tutorials/Intermediate/Composition",
+      "Tutorials/Intermediate/Composition",
+      "Tutorials/Intermediate/Composition",
+      "Tutorials/Intermediate/Composition"
+     ],
+     "latency_ms": 0.35
+    },
+    {
+     "id": "q12",
+     "category": "concept",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Intermediate/About-Tf2",
+      "Tutorials/Intermediate/Tf2/Tf2-Main",
+      "Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Cpp",
+      "How-To-Guides/Releasing/Release-Track",
+      "Concepts/Intermediate/About-Tf2"
+     ],
+     "latency_ms": 0.64
+    },
+    {
+     "id": "q13",
+     "category": "concept",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 2,
+     "top_docs": [
+      "Concepts/Intermediate/About-Different-Middleware-Vendors",
+      "Releases/Release-Iron-Irwini",
+      "Tutorials/Advanced/Recording-A-Bag-From-Your-Own-Node-CPP",
+      "Tutorials/Advanced/Recording-A-Bag-From-Your-Own-Node-Py",
+      "Installation/Alternatives/Ubuntu-Install-Binary"
+     ],
+     "latency_ms": 1.26
+    },
+    {
+     "id": "q14",
+     "category": "concept",
+     "rels": [
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 2,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Advanced/Topic-Statistics-Tutorial/Topic-Statistics-Tutorial",
+      "Concepts/Intermediate/About-Topic-Statistics",
+      "Concepts/Basic/Interfaces-Topics-Services-Actions",
+      "Concepts/Intermediate/About-Topic-Statistics",
+      "Tutorials/Advanced/Topic-Statistics-Tutorial/Topic-Statistics-Tutorial"
+     ],
+     "latency_ms": 0.97
+    },
+    {
+     "id": "q15",
+     "category": "concept",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": null,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Intermediate/Using-Node-Interfaces-Template-Class",
+      "Tutorials/Intermediate/Using-Node-Interfaces-Template-Class",
+      "Tutorials/Intermediate/Using-Node-Interfaces-Template-Class",
+      "How-To-Guides/Migrating-from-ROS1/Migrating-Python-Package-Example",
+      "Tutorials/Intermediate/Using-Node-Interfaces-Template-Class"
+     ],
+     "latency_ms": 0.26
+    },
+    {
+     "id": "q16",
+     "category": "concept",
+     "rels": [
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 3,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Basic",
+      "Concepts/Basic/About-Topics",
+      "Concepts/Basic/About-Topics",
+      "Releases/Alpha-Overview",
+      "Releases/Alpha-Overview"
+     ],
+     "latency_ms": 1.12
+    },
+    {
+     "id": "q17",
+     "category": "cli",
+     "rels": [
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 2,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics",
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics",
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics",
+      "Tutorials/Intermediate/Testing/Integration",
+      "Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data"
+     ],
+     "latency_ms": 0.96
+    },
+    {
+     "id": "q18",
+     "category": "cli",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Actions/Understanding-ROS2-Actions",
+      "Tutorials/Intermediate/Writing-an-Action-Server-Client/Py",
+      "Tutorials/Intermediate/Writing-an-Action-Server-Client/Cpp",
+      "Tutorials/Intermediate/Writing-an-Action-Server-Client/Py",
+      "Tutorials/Intermediate/Writing-an-Action-Server-Client/Py"
+     ],
+     "latency_ms": 1.12
+    },
+    {
+     "id": "q19",
+     "category": "cli",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 2,
+     "top_docs": [
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters",
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters",
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters",
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters",
+      "Releases/Release-Galactic-Geochelone"
+     ],
+     "latency_ms": 1.14
+    },
+    {
+     "id": "q20",
+     "category": "cli",
+     "rels": [
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 4,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects",
+      "How-To-Guides/Launch-file-different-formats",
+      "How-To-Guides/Migrating-from-ROS1/Migrating-Parameters",
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters",
+      "Releases/Release-Dashing-Diademata"
+     ],
+     "latency_ms": 0.93
+    },
+    {
+     "id": "q21",
+     "category": "cli",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": null,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Intermediate/Launch/Creating-Launch-Files",
+      "Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects",
+      "Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects",
+      "Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects",
+      "Tutorials/Intermediate/Launch/Using-Substitutions"
+     ],
+     "latency_ms": 0.98
+    },
+    {
+     "id": "q22",
+     "category": "cli",
+     "rels": [
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 4,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Releases/Release-Galactic-Geochelone",
+      "Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data",
+      "Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data",
+      "Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data",
+      "Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data"
+     ],
+     "latency_ms": 1.43
+    },
+    {
+     "id": "q23",
+     "category": "cli",
+     "rels": [
+      false,
+      true,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false
+     ],
+     "first_relevant_rank": 2,
+     "n_relevant_in_index": 3,
+     "top_docs": [
+      "Releases/Release-Kilted-Kaiju",
+      "Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data",
+      "Releases/Release-Iron-Irwini",
+      "Tutorials/Advanced/Recording-A-Bag-From-Your-Own-Node-CPP",
+      "Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data"
+     ],
+     "latency_ms": 0.97
+    },
+    {
+     "id": "q24",
+     "category": "cli",
+     "rels": [
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 3,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Beginner-Client-Libraries/Getting-Started-With-Ros2doctor",
+      "Tutorials/Beginner-Client-Libraries/Getting-Started-With-Ros2doctor",
+      "Tutorials/Beginner-Client-Libraries/Getting-Started-With-Ros2doctor",
+      "Tutorials/Beginner-Client-Libraries/Getting-Started-With-Ros2doctor",
+      "Releases/Release-Lyrical-Luth"
+     ],
+     "latency_ms": 1.52
+    },
+    {
+     "id": "q25",
+     "category": "cli",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": null,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Releases/Release-Galactic-Geochelone",
+      "Tutorials/Beginner-Client-Libraries/Using-Parameters-In-A-Class-Python",
+      "Tutorials/Intermediate/Tf2/Writing-A-Tf2-Static-Broadcaster-Py",
+      "Tutorials/Intermediate/Monitoring-For-Parameter-Changes-Python",
+      "Tutorials/Advanced/Simulators/MVSim/Installation-Ubuntu"
+     ],
+     "latency_ms": 1.15
+    },
+    {
+     "id": "q26",
+     "category": "cli",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      true,
+      false
+     ],
+     "first_relevant_rank": 5,
+     "n_relevant_in_index": 2,
+     "top_docs": [
+      "Tutorials/Advanced/Simulators/Webots/Setting-Up-Simulation-Webots-Basic",
+      "Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package",
+      "How-To-Guides/Developing-a-ROS-2-Package",
+      "Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package",
+      "Tutorials/Intermediate/Rosdep"
+     ],
+     "latency_ms": 1.42
+    },
+    {
+     "id": "q27",
+     "category": "cli",
+     "rels": [
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 4,
+     "n_relevant_in_index": 2,
+     "top_docs": [
+      "Concepts/Intermediate/About-Tf2",
+      "Concepts/Intermediate/About-Tf2",
+      "Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Cpp",
+      "Tutorials/Intermediate/Tf2/Introduction-To-Tf2",
+      "Tutorials/Intermediate/Tf2/Tf2-Main"
+     ],
+     "latency_ms": 1.06
+    },
+    {
+     "id": "q28",
+     "category": "cli",
+     "rels": [
+      false,
+      true,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 2,
+     "n_relevant_in_index": 2,
+     "top_docs": [
+      "Tutorials/Intermediate/Tf2/Adding-A-Frame-Cpp",
+      "Tutorials/Intermediate/Tf2/Writing-A-Tf2-Static-Broadcaster-Cpp",
+      "Tutorials/Intermediate/Tf2/Writing-A-Tf2-Static-Broadcaster-Py",
+      "Tutorials/Intermediate/Tf2/Adding-A-Frame-Py",
+      "Tutorials/Advanced/Reading-From-A-Bag-File-CPP"
+     ],
+     "latency_ms": 1.25
+    },
+    {
+     "id": "q29",
+     "category": "cli",
+     "rels": [
+      true,
+      true,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 6,
+     "top_docs": [
+      "Tutorials/Intermediate/Composition",
+      "Tutorials/Intermediate/Composition",
+      "Tutorials/Intermediate/Composition",
+      "Concepts/Intermediate/About-Composition",
+      "Releases/Release-Humble-Hawksbill"
+     ],
+     "latency_ms": 0.79
+    },
+    {
+     "id": "q30",
+     "category": "cli",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 6,
+     "n_relevant_in_index": 2,
+     "top_docs": [
+      "Tutorials/Demos/Logging-and-logger-configuration",
+      "Concepts/Intermediate/About-Logging",
+      "Concepts/Intermediate/About-Logging",
+      "Tutorials/Intermediate/Tf2/Debugging-Tf2-Problems",
+      "Tutorials/Demos/Logging-and-logger-configuration"
+     ],
+     "latency_ms": 1.12
+    },
+    {
+     "id": "q31",
+     "category": "cli",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Intermediate/Testing/Python",
+      "Tutorials/Intermediate/Testing/Python",
+      "How-To-Guides/Ament-CMake-Python-Documentation",
+      "Tutorials/Intermediate/Testing/Integration",
+      "The-ROS2-Project/Contributing/Contributing-To-ROS-2-Documentation"
+     ],
+     "latency_ms": 1.45
+    },
+    {
+     "id": "q32",
+     "category": "howto",
+     "rels": [
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 4,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "How-To-Guides/Installation-Troubleshooting",
+      "Tutorials/Intermediate/URDF/Using-URDF-with-Robot-State-Publisher-py",
+      "Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package",
+      "Tutorials/Beginner-Client-Libraries/Colcon-Tutorial",
+      "The-ROS2-Project/Contributing/Contributing-To-ROS-2-Documentation"
+     ],
+     "latency_ms": 1.59
+    },
+    {
+     "id": "q33",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace",
+      "Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace",
+      "Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace",
+      "Tutorials/Beginner-Client-Libraries/Colcon-Tutorial",
+      "Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace"
+     ],
+     "latency_ms": 0.78
+    },
+    {
+     "id": "q34",
+     "category": "howto",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": null,
+     "n_relevant_in_index": 4,
+     "top_docs": [
+      "Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Cpp-Service-And-Client",
+      "Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Cpp-Publisher-And-Subscriber",
+      "Concepts/Intermediate/About-Composition",
+      "How-To-Guides/ROS-2-IDEs",
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes"
+     ],
+     "latency_ms": 1.62
+    },
+    {
+     "id": "q35",
+     "category": "howto",
+     "rels": [
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 3,
+     "n_relevant_in_index": 3,
+     "top_docs": [
+      "Tutorials/Beginner-Client-Libraries/Custom-ROS2-Interfaces",
+      "Tutorials/Beginner-Client-Libraries/Custom-ROS2-Interfaces",
+      "Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface",
+      "Tutorials/Beginner-Client-Libraries/Custom-ROS2-Interfaces",
+      "Tutorials/Beginner-Client-Libraries/Custom-ROS2-Interfaces"
+     ],
+     "latency_ms": 1.43
+    },
+    {
+     "id": "q36",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 8,
+     "top_docs": [
+      "Tutorials/Intermediate/Monitoring-For-Parameter-Changes-Python",
+      "Tutorials/Intermediate/Monitoring-For-Parameter-Changes-Python",
+      "Tutorials/Intermediate/Monitoring-For-Parameter-Changes-CPP",
+      "Tutorials/Beginner-Client-Libraries/Using-Parameters-In-A-Class-Python",
+      "Concepts/Basic/About-Parameters"
+     ],
+     "latency_ms": 1.52
+    },
+    {
+     "id": "q37",
+     "category": "howto",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": null,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Intermediate/About-Different-Middleware-Vendors",
+      "Concepts/Advanced/About-Middleware-Implementations",
+      "Concepts/Advanced/About-Internal-Interfaces",
+      "Concepts/Intermediate/About-Different-Middleware-Vendors",
+      "Installation/RMW-Implementations/DDS-Implementations"
+     ],
+     "latency_ms": 1.27
+    },
+    {
+     "id": "q38",
+     "category": "howto",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": null,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Intermediate/About-Domain-ID",
+      "How-To-Guides/Migrating-from-ROS1/Migrating-Launch-Files",
+      "Releases/Release-Lyrical-Luth",
+      "Tutorials/Advanced/Recording-A-Bag-From-Your-Own-Node-CPP",
+      "Tutorials/Advanced/Recording-A-Bag-From-Your-Own-Node-Py"
+     ],
+     "latency_ms": 1.07
+    },
+    {
+     "id": "q39",
+     "category": "howto",
+     "rels": [
+      false,
+      false,
+      true,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 3,
+     "n_relevant_in_index": 4,
+     "top_docs": [
+      "How-To-Guides/Using-callback-groups",
+      "How-To-Guides/Using-callback-groups",
+      "How-To-Guides/Sync-Vs-Async",
+      "How-To-Guides/Sync-Vs-Async",
+      "How-To-Guides/Using-callback-groups"
+     ],
+     "latency_ms": 1.35
+    },
+    {
+     "id": "q40",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 2,
+     "top_docs": [
+      "How-To-Guides/DDS-tuning",
+      "How-To-Guides/DDS-tuning",
+      "How-To-Guides/DDS-tuning",
+      "How-To-Guides/Configure-ZeroCopy-loaned-messages",
+      "Tutorials/Miscellaneous/Building-Realtime-rt_preempt-kernel-for-ROS-2"
+     ],
+     "latency_ms": 1.66
+    },
+    {
+     "id": "q41",
+     "category": "howto",
+     "rels": [
+      false,
+      false,
+      true,
+      true,
+      false,
+      false,
+      true,
+      false,
+      true,
+      false
+     ],
+     "first_relevant_rank": 3,
+     "n_relevant_in_index": 10,
+     "top_docs": [
+      "Tutorials/Advanced/Discovery-Server/Discovery-Server",
+      "Tutorials/Advanced/Discovery-Server/Discovery-Server",
+      "Tutorials/Advanced/Discovery-Server/Discovery-Server",
+      "Tutorials/Advanced/Discovery-Server/Discovery-Server",
+      "Tutorials/Advanced/Discovery-Server/Discovery-Server"
+     ],
+     "latency_ms": 1.38
+    },
+    {
+     "id": "q42",
+     "category": "howto",
+     "rels": [
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 2,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Advanced/Improved-Dynamic-Discovery",
+      "Installation/RMW-Implementations/Non-DDS-Implementations/Working-with-Zenoh",
+      "Releases/Release-Kilted-Kaiju",
+      "Installation/RMW-Implementations/Non-DDS-Implementations/Working-with-Zenoh",
+      "Installation/RMW-Implementations/Non-DDS-Implementations/Working-with-Zenoh"
+     ],
+     "latency_ms": 1.69
+    },
+    {
+     "id": "q43",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 2,
+     "top_docs": [
+      "Tutorials/Advanced/Security/Introducing-ros2-security",
+      "Tutorials/Advanced/Creating-An-RMW-Implementation",
+      "Tutorials/Advanced/Security/Examine-Traffic",
+      "Concepts/Intermediate/About-Security",
+      "Tutorials/Advanced/Security/Introducing-ros2-security"
+     ],
+     "latency_ms": 1.06
+    },
+    {
+     "id": "q44",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Advanced/Security/Introducing-ros2-security",
+      "Tutorials/Advanced/Security/The-Keystore",
+      "Tutorials/Advanced/Security/Introducing-ros2-security",
+      "Tutorials/Advanced/Security/Introducing-ros2-security",
+      "Tutorials/Advanced/Security/The-Keystore"
+     ],
+     "latency_ms": 0.84
+    },
+    {
+     "id": "q45",
+     "category": "howto",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": null,
+     "n_relevant_in_index": 3,
+     "top_docs": [
+      "How-To-Guides/Launching-composable-nodes",
+      "Tutorials/Demos/Intra-Process-Communication",
+      "Releases/Release-Iron-Irwini",
+      "Tutorials/Demos/Intra-Process-Communication",
+      "Tutorials/Demos/Intra-Process-Communication"
+     ],
+     "latency_ms": 0.94
+    },
+    {
+     "id": "q46",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Demos/Real-Time-Programming",
+      "Tutorials/Demos/Real-Time-Programming",
+      "Tutorials/Advanced/Allocator-Template-Tutorial",
+      "Concepts/Intermediate/About-Executors",
+      "Concepts/Intermediate/About-Executors"
+     ],
+     "latency_ms": 1.05
+    },
+    {
+     "id": "q47",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF",
+      "Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF",
+      "Tutorials/Intermediate/URDF/Building-a-Visual-Robot-Model-with-URDF-from-Scratch",
+      "Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF",
+      "Tutorials/Intermediate/URDF/Building-a-Visual-Robot-Model-with-URDF-from-Scratch"
+     ],
+     "latency_ms": 1.59
+    },
+    {
+     "id": "q48",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Intermediate/URDF/Using-Xacro-to-Clean-Up-a-URDF-File",
+      "Tutorials/Intermediate/URDF/Using-Xacro-to-Clean-Up-a-URDF-File",
+      "Tutorials/Intermediate/URDF/Using-Xacro-to-Clean-Up-a-URDF-File",
+      "Releases/Release-Kilted-Kaiju",
+      "Tutorials/Intermediate/URDF/Building-a-Visual-Robot-Model-with-URDF-from-Scratch"
+     ],
+     "latency_ms": 0.7
+    },
+    {
+     "id": "q49",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "How-To-Guides/Launch-file-different-formats",
+      "Tutorials/Beginner-CLI-Tools/Launching-Multiple-Nodes/Launching-Multiple-Nodes",
+      "Tutorials/Intermediate/Launch/Creating-Launch-Files",
+      "How-To-Guides/Launch-file-different-formats",
+      "Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects"
+     ],
+     "latency_ms": 0.66
+    },
+    {
+     "id": "q50",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Intermediate/Launch/Using-Event-Handlers",
+      "Tutorials/Intermediate/Launch/Creating-Launch-Files",
+      "Tutorials/Advanced/Simulators/Webots/Simulation-Reset-Handler",
+      "How-To-Guides/ROS-2-IDEs",
+      "Tutorials/Advanced/Simulators/Webots/Simulation-Reset-Handler"
+     ],
+     "latency_ms": 1.12
+    },
+    {
+     "id": "q51",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 2,
+     "top_docs": [
+      "How-To-Guides/Overriding-QoS-Policies-For-Recording-And-Playback",
+      "How-To-Guides/Overriding-QoS-Policies-For-Recording-And-Playback",
+      "Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data",
+      "Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data",
+      "Releases/Release-Humble-Hawksbill"
+     ],
+     "latency_ms": 0.81
+    },
+    {
+     "id": "q52",
+     "category": "howto",
+     "rels": [
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 2,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Intermediate/Tf2/Quaternion-Fundamentals",
+      "Tutorials/Intermediate/Tf2/Quaternion-Fundamentals",
+      "Tutorials/Intermediate/Tf2/Quaternion-Fundamentals",
+      "Tutorials/Intermediate/Tf2/Writing-A-Tf2-Broadcaster-Py",
+      "Tutorials/Intermediate/Tf2/Writing-A-Tf2-Broadcaster-Cpp"
+     ],
+     "latency_ms": 0.5
+    },
+    {
+     "id": "q53",
+     "category": "howto",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 7,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "How-To-Guides/Getting-Backtraces-in-ROS-2",
+      "How-To-Guides/Getting-Backtraces-in-ROS-2",
+      "How-To-Guides/Getting-Backtraces-in-ROS-2",
+      "How-To-Guides/Getting-Backtraces-in-ROS-2",
+      "How-To-Guides/Getting-Backtraces-in-ROS-2"
+     ],
+     "latency_ms": 1.27
+    },
+    {
+     "id": "q54",
+     "category": "project",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": null,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Releases",
+      "About-ROS",
+      "How-To-Guides/Core-maintainer-guide",
+      "Releases/Release-Rolling-Ridley",
+      "Releases"
+     ],
+     "latency_ms": 1.05
+    },
+    {
+     "id": "q55",
+     "category": "project",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 2,
+     "top_docs": [
+      "The-ROS2-Project/Contributing/Code-Style-Language-Versions",
+      "The-ROS2-Project/Contributing/Windows-Tips-and-Tricks",
+      "Installation/Alternatives/Windows-Development-Setup",
+      "Tutorials/Advanced/Ament-Lint-For-Clean-Code",
+      "Tutorials/Advanced/Ament-Lint-For-Clean-Code"
+     ],
+     "latency_ms": 1.48
+    },
+    {
+     "id": "q56",
+     "category": "project",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "How-To-Guides/Releasing/First-Time-Release",
+      "How-To-Guides/Releasing/Release-Track",
+      "How-To-Guides/Releasing/Subsequent-Releases",
+      "How-To-Guides/Releasing/Releasing-a-Package",
+      "How-To-Guides/Releasing/Release-Team-Repository"
+     ],
+     "latency_ms": 1.5
+    },
+    {
+     "id": "q57",
+     "category": "paper",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": null,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "pdf/marathon2-nav2",
+      "pdf/marathon2-nav2",
+      "pdf/marathon2-nav2",
+      "pdf/marathon2-nav2",
+      "pdf/marathon2-nav2"
+     ],
+     "latency_ms": 1.07
+    },
+    {
+     "id": "q58",
+     "category": "paper",
+     "rels": [
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 2,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "pdf/marathon2-nav2",
+      "pdf/marathon2-nav2",
+      "Related-Projects",
+      "pdf/marathon2-nav2",
+      "pdf/nav2-algorithms-survey"
+     ],
+     "latency_ms": 0.96
+    },
+    {
+     "id": "q59",
+     "category": "paper",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 6,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Demos/Rosbag-with-ROS1-Bridge",
+      "Tutorials/Demos/Intra-Process-Communication",
+      "Concepts/Intermediate/About-Different-Middleware-Vendors",
+      "First-Steps",
+      "The-ROS2-Project/Release-Schedule"
+     ],
+     "latency_ms": 0.85
+    },
+    {
+     "id": "q60",
+     "category": "paper",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "pdf/nav2-algorithms-survey",
+      "How-To-Guides/Getting-Backtraces-in-ROS-2",
+      "pdf/marathon2-nav2",
+      "Tutorials/Advanced/Simulators/Webots/Installation-Windows",
+      "pdf/nav2-algorithms-survey"
+     ],
+     "latency_ms": 0.64
+    },
+    {
+     "id": "q61",
+     "category": "paper",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "pdf/nav2-algorithms-survey",
+      "pdf/nav2-algorithms-survey",
+      "pdf/nav2-algorithms-survey",
+      "pdf/nav2-algorithms-survey",
+      "pdf/nav2-algorithms-survey"
+     ],
+     "latency_ms": 0.98
+    }
+   ],
+   "hit@1": {
+    "mean": 0.4098360655737705,
+    "ci_low": 0.29508196721311475,
+    "ci_high": 0.5409836065573771
+   },
+   "hit@3": {
+    "mean": 0.6229508196721312,
+    "ci_low": 0.4918032786885246,
+    "ci_high": 0.7377049180327869
+   },
+   "hit@5": {
+    "mean": 0.7213114754098361,
+    "ci_low": 0.6065573770491803,
+    "ci_high": 0.8360655737704918
+   },
+   "hit@10": {
+    "mean": 0.819672131147541,
+    "ci_low": 0.7213114754098361,
+    "ci_high": 0.9180327868852459
+   },
+   "mrr@10": {
+    "mean": 0.5405932864949258,
+    "ci_low": 0.4385245901639344,
+    "ci_high": 0.6409836065573771
+   },
+   "ndcg@10": {
+    "mean": 0.5487636878471048,
+    "ci_low": 0.46149079490528455,
+    "ci_high": 0.6372208423939018
+   },
+   "p@5": {
+    "mean": 0.16393442622950818,
+    "ci_low": 0.13442622950819674,
+    "ci_high": 0.19344262295081968
+   },
+   "latency_ms_mean": 1.1,
+   "latency_ms_p95": 1.7,
+   "hit@5_by_category": {
+    "cli": 0.8,
+    "concept": 0.625,
+    "howto": 0.773,
+    "paper": 0.6,
+    "project": 0.667
+   },
+   "n_questions": 61,
+   "strategy": "section"
+  },
+  {
+   "mode": "dense",
+   "per_question": [
+    {
+     "id": "q01",
+     "category": "concept",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Intermediate/About-Domain-ID",
+      "Concepts/Intermediate/About-Domain-ID",
+      "Concepts/Intermediate/About-Domain-ID",
+      "Concepts/Intermediate/About-Domain-ID",
+      "Tutorials/Advanced/Creating-An-RMW-Implementation"
+     ],
+     "latency_ms": 10.98
+    },
+    {
+     "id": "q02",
+     "category": "concept",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Intermediate/About-Quality-of-Service-Settings",
+      "Tutorials/Demos/Wait-for-Acknowledgment",
+      "Concepts/Intermediate/About-Quality-of-Service-Settings",
+      "Tutorials/Advanced/FastDDS-Configuration",
+      "Tutorials/Demos/Wait-for-Acknowledgment"
+     ],
+     "latency_ms": 6.69
+    },
+    {
+     "id": "q03",
+     "category": "concept",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": null,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Basic/About-Topics",
+      "Releases/Alpha-Overview",
+      "Releases/Alpha-Overview",
+      "Releases/Alpha-Overview",
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics"
+     ],
+     "latency_ms": 6.59
+    },
+    {
+     "id": "q04",
+     "category": "concept",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": null,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "How-To-Guides/Sync-Vs-Async",
+      "Tutorials/Demos/Real-Time-Programming",
+      "How-To-Guides/Sync-Vs-Async",
+      "pdf/ros2-design-architecture-uses",
+      "How-To-Guides/Sync-Vs-Async"
+     ],
+     "latency_ms": 6.51
+    },
+    {
+     "id": "q05",
+     "category": "concept",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Basic/About-Actions",
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Actions/Understanding-ROS2-Actions",
+      "Tutorials/Intermediate/Writing-an-Action-Server-Client/Py",
+      "Tutorials/Intermediate/Writing-an-Action-Server-Client/Cpp",
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Actions/Understanding-ROS2-Actions"
+     ],
+     "latency_ms": 5.95
+    },
+    {
+     "id": "q06",
+     "category": "concept",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Basic/About-Topics",
+      "Concepts/Basic/About-Topics",
+      "Tutorials/Advanced/Creating-An-RMW-Implementation",
+      "Tutorials/Demos/Intra-Process-Communication",
+      "Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Cpp-Publisher-And-Subscriber"
+     ],
+     "latency_ms": 5.7
+    },
+    {
+     "id": "q07",
+     "category": "concept",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Basic/About-Parameters",
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters",
+      "Tutorials/Beginner-Client-Libraries/Using-Parameters-In-A-Class-Python",
+      "Releases/Release-Dashing-Diademata",
+      "Tutorials/Beginner-Client-Libraries/Using-Parameters-In-A-Class-CPP"
+     ],
+     "latency_ms": 6.3
+    },
+    {
+     "id": "q08",
+     "category": "concept",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Basic/About-Discovery",
+      "Concepts/Basic/About-Nodes",
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes",
+      "Tutorials/Beginner-CLI-Tools/Launching-Multiple-Nodes/Launching-Multiple-Nodes",
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes"
+     ],
+     "latency_ms": 5.57
+    },
+    {
+     "id": "q09",
+     "category": "concept",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 7,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "How-To-Guides/Using-callback-groups",
+      "How-To-Guides/Using-callback-groups",
+      "How-To-Guides/Using-callback-groups",
+      "How-To-Guides/Using-callback-groups",
+      "How-To-Guides/Using-callback-groups"
+     ],
+     "latency_ms": 5.56
+    },
+    {
+     "id": "q10",
+     "category": "concept",
+     "rels": [
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 2,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Beginner-CLI-Tools/Using-Rqt-Console/Using-Rqt-Console",
+      "Concepts/Intermediate/About-Logging",
+      "Releases/Release-Lyrical-Luth",
+      "Concepts/Intermediate/About-Logging",
+      "Tutorials/Demos/Logging-and-logger-configuration"
+     ],
+     "latency_ms": 5.76
+    },
+    {
+     "id": "q11",
+     "category": "concept",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Intermediate/About-Composition",
+      "Tutorials/Intermediate/Composition",
+      "Tutorials/Intermediate/Composition",
+      "Tutorials/Intermediate/Composition",
+      "Concepts/Intermediate/About-Composition"
+     ],
+     "latency_ms": 6.81
+    },
+    {
+     "id": "q12",
+     "category": "concept",
+     "rels": [
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 2,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Cpp",
+      "Concepts/Intermediate/About-Tf2",
+      "Concepts/Intermediate/About-Tf2",
+      "Tutorials/Intermediate/Tf2/Time-Travel-With-Tf2-Cpp",
+      "Tutorials/Intermediate/Tf2/Time-Travel-With-Tf2-Cpp"
+     ],
+     "latency_ms": 5.92
+    },
+    {
+     "id": "q13",
+     "category": "concept",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": null,
+     "n_relevant_in_index": 2,
+     "top_docs": [
+      "Installation/Windows-Install-Binary",
+      "Installation/Alternatives/Ubuntu-Install-Binary",
+      "Installation/Ubuntu-Install-Debs",
+      "Installation/Alternatives/Windows-Development-Setup",
+      "Installation/Alternatives/Ubuntu-Development-Setup"
+     ],
+     "latency_ms": 5.51
+    },
+    {
+     "id": "q14",
+     "category": "concept",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Intermediate/About-Topic-Statistics",
+      "Concepts/Basic/Interfaces-Topics-Services-Actions",
+      "Tutorials/Advanced/Topic-Statistics-Tutorial/Topic-Statistics-Tutorial",
+      "Tutorials/Advanced/Topic-Statistics-Tutorial/Topic-Statistics-Tutorial",
+      "Tutorials/Advanced/Topic-Statistics-Tutorial/Topic-Statistics-Tutorial"
+     ],
+     "latency_ms": 5.98
+    },
+    {
+     "id": "q15",
+     "category": "concept",
+     "rels": [
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 2,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes",
+      "Concepts/Basic/About-Nodes",
+      "pdf/ros2-design-architecture-uses",
+      "Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Cpp-Publisher-And-Subscriber",
+      "Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Py-Service-And-Client"
+     ],
+     "latency_ms": 6.64
+    },
+    {
+     "id": "q16",
+     "category": "concept",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Basic/About-Topics",
+      "Concepts/Advanced/About-Internal-Interfaces",
+      "Concepts/Advanced/About-Internal-Interfaces",
+      "Tutorials/Advanced/Creating-An-RMW-Implementation",
+      "Concepts/Basic/About-Topics"
+     ],
+     "latency_ms": 5.69
+    },
+    {
+     "id": "q17",
+     "category": "cli",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": null,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Intermediate/Testing/Integration",
+      "Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter",
+      "Tutorials/Intermediate/Testing/Integration",
+      "Tutorials/Intermediate/Tf2/Writing-A-Tf2-Broadcaster-Py",
+      "Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter"
+     ],
+     "latency_ms": 5.66
+    },
+    {
+     "id": "q18",
+     "category": "cli",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Actions/Understanding-ROS2-Actions",
+      "Tutorials/Intermediate/Writing-an-Action-Server-Client/Py",
+      "Tutorials/Intermediate/Writing-an-Action-Server-Client/Py",
+      "Tutorials/Intermediate/Writing-an-Action-Server-Client/Py",
+      "Tutorials/Intermediate/Writing-an-Action-Server-Client/Py"
+     ],
+     "latency_ms": 5.61
+    },
+    {
+     "id": "q19",
+     "category": "cli",
+     "rels": [
+      false,
+      true,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 2,
+     "n_relevant_in_index": 2,
+     "top_docs": [
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters",
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters",
+      "Tutorials/Beginner-Client-Libraries/Using-Parameters-In-A-Class-Python",
+      "How-To-Guides/Migrating-from-ROS1/Migrating-Launch-Files",
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters"
+     ],
+     "latency_ms": 5.92
+    },
+    {
+     "id": "q20",
+     "category": "cli",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 6,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects",
+      "How-To-Guides/Launch-file-different-formats",
+      "How-To-Guides/Migrating-from-ROS1/Migrating-Parameters",
+      "How-To-Guides/Node-arguments",
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters"
+     ],
+     "latency_ms": 5.62
+    },
+    {
+     "id": "q21",
+     "category": "cli",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": null,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Intermediate/Launch/Creating-Launch-Files",
+      "Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects",
+      "Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace",
+      "Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim",
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes"
+     ],
+     "latency_ms": 5.65
+    },
+    {
+     "id": "q22",
+     "category": "cli",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data",
+      "Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data",
+      "Tutorials/Advanced/Recording-A-Bag-From-Your-Own-Node-Py",
+      "Tutorials/Advanced/Recording-A-Bag-From-Your-Own-Node-Py",
+      "Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data"
+     ],
+     "latency_ms": 5.91
+    },
+    {
+     "id": "q23",
+     "category": "cli",
+     "rels": [
+      true,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 3,
+     "top_docs": [
+      "Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data",
+      "Tutorials/Advanced/Recording-A-Bag-From-Your-Own-Node-CPP",
+      "Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data",
+      "Tutorials/Advanced/Recording-A-Bag-From-Your-Own-Node-Py",
+      "Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data"
+     ],
+     "latency_ms": 5.34
+    },
+    {
+     "id": "q24",
+     "category": "cli",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Beginner-Client-Libraries/Getting-Started-With-Ros2doctor",
+      "Tutorials/Beginner-Client-Libraries/Getting-Started-With-Ros2doctor",
+      "Tutorials/Beginner-Client-Libraries/Getting-Started-With-Ros2doctor",
+      "Tutorials/Beginner-Client-Libraries/Getting-Started-With-Ros2doctor",
+      "The-ROS2-Project/Contributing/Developer-Guide"
+     ],
+     "latency_ms": 6.13
+    },
+    {
+     "id": "q25",
+     "category": "cli",
+     "rels": [
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 3,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "How-To-Guides/Developing-a-ROS-2-Package",
+      "Tutorials/Beginner-Client-Libraries/Using-Parameters-In-A-Class-Python",
+      "Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package",
+      "Tutorials/Intermediate/Monitoring-For-Parameter-Changes-Python",
+      "Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package"
+     ],
+     "latency_ms": 5.62
+    },
+    {
+     "id": "q26",
+     "category": "cli",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 2,
+     "top_docs": [
+      "Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace",
+      "Tutorials/Beginner-Client-Libraries/Colcon-Tutorial",
+      "Installation/RMW-Implementations/DDS-Implementations/Working-with-GurumNetworks-GurumDDS",
+      "Tutorials/Beginner-Client-Libraries/Colcon-Tutorial",
+      "Tutorials/Beginner-Client-Libraries/Colcon-Tutorial"
+     ],
+     "latency_ms": 5.63
+    },
+    {
+     "id": "q27",
+     "category": "cli",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 2,
+     "top_docs": [
+      "Tutorials/Intermediate/Tf2/Introduction-To-Tf2",
+      "Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Cpp",
+      "Concepts/Intermediate/About-Tf2",
+      "Concepts/Intermediate/About-Tf2",
+      "Tutorials/Intermediate/Tf2/Introduction-To-Tf2"
+     ],
+     "latency_ms": 5.9
+    },
+    {
+     "id": "q28",
+     "category": "cli",
+     "rels": [
+      false,
+      false,
+      true,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 3,
+     "n_relevant_in_index": 2,
+     "top_docs": [
+      "Tutorials/Intermediate/Tf2/Writing-A-Tf2-Static-Broadcaster-Cpp",
+      "Tutorials/Intermediate/Tf2/Writing-A-Tf2-Static-Broadcaster-Py",
+      "Tutorials/Intermediate/Tf2/Writing-A-Tf2-Static-Broadcaster-Cpp",
+      "Tutorials/Intermediate/Tf2/Writing-A-Tf2-Static-Broadcaster-Py",
+      "Tutorials/Intermediate/URDF/Using-URDF-with-Robot-State-Publisher-cpp"
+     ],
+     "latency_ms": 5.45
+    },
+    {
+     "id": "q29",
+     "category": "cli",
+     "rels": [
+      false,
+      true,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true,
+      true
+     ],
+     "first_relevant_rank": 2,
+     "n_relevant_in_index": 6,
+     "top_docs": [
+      "Concepts/Intermediate/About-Composition",
+      "Tutorials/Intermediate/Composition",
+      "Concepts/Intermediate/About-Composition",
+      "Tutorials/Intermediate/Composition",
+      "How-To-Guides/Launching-composable-nodes"
+     ],
+     "latency_ms": 5.28
+    },
+    {
+     "id": "q30",
+     "category": "cli",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true
+     ],
+     "first_relevant_rank": 10,
+     "n_relevant_in_index": 2,
+     "top_docs": [
+      "Tutorials/Intermediate/Composition",
+      "How-To-Guides/Getting-Backtraces-in-ROS-2",
+      "Tutorials/Intermediate/Tf2/Debugging-Tf2-Problems",
+      "Tutorials/Intermediate/Tf2/Debugging-Tf2-Problems",
+      "Tutorials/Demos/Logging-and-logger-configuration"
+     ],
+     "latency_ms": 5.89
+    },
+    {
+     "id": "q31",
+     "category": "cli",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Intermediate/Testing/Python",
+      "Tutorials/Intermediate/Testing/Python",
+      "How-To-Guides/Ament-CMake-Python-Documentation",
+      "Tutorials/Intermediate/Testing/Integration",
+      "Tutorials/Intermediate/Testing/Python"
+     ],
+     "latency_ms": 5.54
+    },
+    {
+     "id": "q32",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Beginner-Client-Libraries/Colcon-Tutorial",
+      "Installation/Maintaining-a-Source-Checkout",
+      "Installation/Alternatives/macOS-Development-Setup",
+      "How-To-Guides/ROS-2-IDEs",
+      "How-To-Guides/ROS-2-IDEs"
+     ],
+     "latency_ms": 5.39
+    },
+    {
+     "id": "q33",
+     "category": "howto",
+     "rels": [
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 2,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace",
+      "Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace",
+      "Tutorials/Beginner-Client-Libraries/Colcon-Tutorial",
+      "Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace",
+      "Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment"
+     ],
+     "latency_ms": 5.77
+    },
+    {
+     "id": "q34",
+     "category": "howto",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false
+     ],
+     "first_relevant_rank": 9,
+     "n_relevant_in_index": 4,
+     "top_docs": [
+      "Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Cpp-Service-And-Client",
+      "Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package",
+      "Installation/Windows-Install-Binary",
+      "Installation/Alternatives/macOS-Development-Setup",
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes"
+     ],
+     "latency_ms": 5.82
+    },
+    {
+     "id": "q35",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 3,
+     "top_docs": [
+      "Tutorials/Beginner-Client-Libraries/Custom-ROS2-Interfaces",
+      "Tutorials/Beginner-Client-Libraries/Custom-ROS2-Interfaces",
+      "Tutorials/Beginner-Client-Libraries/Custom-ROS2-Interfaces",
+      "Tutorials/Beginner-Client-Libraries/Custom-ROS2-Interfaces",
+      "Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface"
+     ],
+     "latency_ms": 6.01
+    },
+    {
+     "id": "q36",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      true,
+      false,
+      true,
+      true,
+      false,
+      true,
+      true,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 8,
+     "top_docs": [
+      "Tutorials/Intermediate/Monitoring-For-Parameter-Changes-Python",
+      "Tutorials/Intermediate/Monitoring-For-Parameter-Changes-Python",
+      "Tutorials/Intermediate/Monitoring-For-Parameter-Changes-Python",
+      "Tutorials/Intermediate/Monitoring-For-Parameter-Changes-Python",
+      "Tutorials/Intermediate/Monitoring-For-Parameter-Changes-Python"
+     ],
+     "latency_ms": 5.52
+    },
+    {
+     "id": "q37",
+     "category": "howto",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": null,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Advanced/FastDDS-Configuration",
+      "Tutorials/Advanced/FastDDS-Configuration",
+      "Tutorials/Advanced/FastDDS-Configuration",
+      "Tutorials/Advanced/FastDDS-Configuration",
+      "Concepts/Advanced/About-Internal-Interfaces"
+     ],
+     "latency_ms": 6.05
+    },
+    {
+     "id": "q38",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Advanced/Improved-Dynamic-Discovery",
+      "Concepts/Basic/About-Discovery",
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics",
+      "Tutorials/Advanced/Improved-Dynamic-Discovery",
+      "Releases/Release-Iron-Irwini"
+     ],
+     "latency_ms": 5.46
+    },
+    {
+     "id": "q39",
+     "category": "howto",
+     "rels": [
+      false,
+      true,
+      true,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      true
+     ],
+     "first_relevant_rank": 2,
+     "n_relevant_in_index": 4,
+     "top_docs": [
+      "How-To-Guides/Using-callback-groups",
+      "How-To-Guides/Sync-Vs-Async",
+      "How-To-Guides/Sync-Vs-Async",
+      "How-To-Guides/Using-callback-groups",
+      "How-To-Guides/Using-callback-groups"
+     ],
+     "latency_ms": 5.64
+    },
+    {
+     "id": "q40",
+     "category": "howto",
+     "rels": [
+      false,
+      false,
+      true,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 3,
+     "n_relevant_in_index": 2,
+     "top_docs": [
+      "pdf/ros2-design-architecture-uses",
+      "pdf/ros2-design-architecture-uses",
+      "How-To-Guides/DDS-tuning",
+      "How-To-Guides/Working-with-multiple-RMW-implementations",
+      "How-To-Guides/DDS-tuning"
+     ],
+     "latency_ms": 5.98
+    },
+    {
+     "id": "q41",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      true
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 10,
+     "top_docs": [
+      "Tutorials/Advanced/Discovery-Server/Discovery-Server",
+      "Tutorials/Advanced/Discovery-Server/Discovery-Server",
+      "Tutorials/Advanced/Discovery-Server/Discovery-Server",
+      "Tutorials/Advanced/Discovery-Server/Discovery-Server",
+      "Tutorials/Advanced/Discovery-Server/Discovery-Server"
+     ],
+     "latency_ms": 5.58
+    },
+    {
+     "id": "q42",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Installation/RMW-Implementations/Non-DDS-Implementations/Working-with-Zenoh",
+      "Tutorials/Advanced/Creating-An-RMW-Implementation",
+      "Tutorials/Advanced/Improved-Dynamic-Discovery",
+      "Installation/RMW-Implementations/Non-DDS-Implementations",
+      "Installation/RMW-Implementations/Non-DDS-Implementations/Working-with-Zenoh"
+     ],
+     "latency_ms": 5.52
+    },
+    {
+     "id": "q43",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 2,
+     "top_docs": [
+      "Tutorials/Advanced/Security/Introducing-ros2-security",
+      "Concepts/Intermediate/About-Security",
+      "Tutorials/Advanced/Security/Introducing-ros2-security",
+      "Tutorials/Advanced/Security/Deployment-Guidelines",
+      "Tutorials/Advanced/Security/Introducing-ros2-security"
+     ],
+     "latency_ms": 5.74
+    },
+    {
+     "id": "q44",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Advanced/Security/Introducing-ros2-security",
+      "Tutorials/Advanced/Security/The-Keystore",
+      "Tutorials/Advanced/Security/The-Keystore",
+      "Tutorials/Advanced/Security/The-Keystore",
+      "Tutorials/Advanced/Security/Introducing-ros2-security"
+     ],
+     "latency_ms": 5.56
+    },
+    {
+     "id": "q45",
+     "category": "howto",
+     "rels": [
+      true,
+      true,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 3,
+     "top_docs": [
+      "Tutorials/Demos/Intra-Process-Communication",
+      "Tutorials/Demos/Intra-Process-Communication",
+      "Tutorials/Demos/Intra-Process-Communication",
+      "pdf/ros2-design-architecture-uses",
+      "Tutorials/Demos/Intra-Process-Communication"
+     ],
+     "latency_ms": 5.45
+    },
+    {
+     "id": "q46",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Demos/Real-Time-Programming",
+      "Concepts/Intermediate/About-Executors",
+      "Tutorials/Demos/Real-Time-Programming",
+      "The-ROS2-Project/Contributing/Quality-Guide",
+      "Tutorials/Demos/Real-Time-Programming"
+     ],
+     "latency_ms": 5.51
+    },
+    {
+     "id": "q47",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF",
+      "Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF",
+      "Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF",
+      "Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF",
+      "Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF"
+     ],
+     "latency_ms": 5.42
+    },
+    {
+     "id": "q48",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Intermediate/URDF/Using-Xacro-to-Clean-Up-a-URDF-File",
+      "Tutorials/Intermediate/URDF/Using-Xacro-to-Clean-Up-a-URDF-File",
+      "Tutorials/Intermediate/URDF/Using-Xacro-to-Clean-Up-a-URDF-File",
+      "Tutorials/Intermediate/URDF/Exporting-an-URDF-File",
+      "Tutorials/Intermediate/URDF/URDF-Main"
+     ],
+     "latency_ms": 5.33
+    },
+    {
+     "id": "q49",
+     "category": "howto",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false
+     ],
+     "first_relevant_rank": 8,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Intermediate/Tf2/Writing-A-Tf2-Broadcaster-Cpp",
+      "Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects",
+      "Tutorials/Intermediate/Tf2/Writing-A-Tf2-Broadcaster-Py",
+      "Tutorials/Intermediate/Tf2/Writing-A-Tf2-Broadcaster-Cpp",
+      "Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects"
+     ],
+     "latency_ms": 5.67
+    },
+    {
+     "id": "q50",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Intermediate/Launch/Using-Event-Handlers",
+      "Tutorials/Intermediate/Testing/Integration",
+      "Tutorials/Intermediate/Launch/Creating-Launch-Files",
+      "Tutorials/Intermediate/Testing/Integration",
+      "Tutorials/Intermediate/Testing/Integration"
+     ],
+     "latency_ms": 5.42
+    },
+    {
+     "id": "q51",
+     "category": "howto",
+     "rels": [
+      false,
+      true,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 2,
+     "n_relevant_in_index": 2,
+     "top_docs": [
+      "How-To-Guides/Overriding-QoS-Policies-For-Recording-And-Playback",
+      "How-To-Guides/Overriding-QoS-Policies-For-Recording-And-Playback",
+      "How-To-Guides/Overriding-QoS-Policies-For-Recording-And-Playback",
+      "Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data",
+      "Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data"
+     ],
+     "latency_ms": 5.75
+    },
+    {
+     "id": "q52",
+     "category": "howto",
+     "rels": [
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 2,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Intermediate/Tf2/Quaternion-Fundamentals",
+      "Tutorials/Intermediate/Tf2/Quaternion-Fundamentals",
+      "Tutorials/Intermediate/Tf2/Quaternion-Fundamentals",
+      "Tutorials/Intermediate/Tf2/Quaternion-Fundamentals",
+      "Tutorials/Intermediate/Tf2/Quaternion-Fundamentals"
+     ],
+     "latency_ms": 5.53
+    },
+    {
+     "id": "q53",
+     "category": "howto",
+     "rels": [
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 2,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "How-To-Guides/Getting-Backtraces-in-ROS-2",
+      "How-To-Guides/Getting-Backtraces-in-ROS-2",
+      "How-To-Guides/Getting-Backtraces-in-ROS-2",
+      "How-To-Guides/Getting-Backtraces-in-ROS-2",
+      "How-To-Guides/Getting-Backtraces-in-ROS-2"
+     ],
+     "latency_ms": 5.65
+    },
+    {
+     "id": "q54",
+     "category": "project",
+     "rels": [
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 2,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "About-ROS",
+      "The-ROS2-Project/Release-Schedule",
+      "Releases",
+      "Releases/Development",
+      "Releases"
+     ],
+     "latency_ms": 5.93
+    },
+    {
+     "id": "q55",
+     "category": "project",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": null,
+     "n_relevant_in_index": 2,
+     "top_docs": [
+      "The-ROS2-Project/Contributing/Windows-Tips-and-Tricks",
+      "Tutorials/Beginner-Client-Libraries/Using-Parameters-In-A-Class-CPP",
+      "How-To-Guides/Installation-Troubleshooting",
+      "Releases/Alpha-Overview",
+      "Tutorials/Beginner-Client-Libraries/Pluginlib"
+     ],
+     "latency_ms": 5.59
+    },
+    {
+     "id": "q56",
+     "category": "project",
+     "rels": [
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 4,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "How-To-Guides/Releasing/Releasing-a-Package",
+      "How-To-Guides/Releasing/Index-Your-Packages",
+      "How-To-Guides/Releasing/Release-Track",
+      "How-To-Guides/Releasing/First-Time-Release",
+      "How-To-Guides/Releasing/Index-Your-Packages"
+     ],
+     "latency_ms": 5.97
+    },
+    {
+     "id": "q57",
+     "category": "paper",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 6,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "pdf/marathon2-nav2",
+      "pdf/marathon2-nav2",
+      "pdf/marathon2-nav2",
+      "pdf/marathon2-nav2",
+      "pdf/marathon2-nav2"
+     ],
+     "latency_ms": 5.62
+    },
+    {
+     "id": "q58",
+     "category": "paper",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 5,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "pdf/marathon2-nav2",
+      "pdf/marathon2-nav2",
+      "pdf/marathon2-nav2",
+      "pdf/marathon2-nav2",
+      "pdf/marathon2-nav2"
+     ],
+     "latency_ms": 5.35
+    },
+    {
+     "id": "q59",
+     "category": "paper",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": null,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "pdf/ros2-design-architecture-uses",
+      "Concepts/Basic",
+      "Releases/Alpha-Overview",
+      "Concepts/Intermediate/About-Different-Middleware-Vendors",
+      "Releases/Alpha-Overview"
+     ],
+     "latency_ms": 6.05
+    },
+    {
+     "id": "q60",
+     "category": "paper",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "pdf/nav2-algorithms-survey",
+      "pdf/nav2-algorithms-survey",
+      "pdf/marathon2-nav2",
+      "pdf/nav2-algorithms-survey",
+      "pdf/marathon2-nav2"
+     ],
+     "latency_ms": 5.55
+    },
+    {
+     "id": "q61",
+     "category": "paper",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "pdf/nav2-algorithms-survey",
+      "pdf/nav2-algorithms-survey",
+      "Related-Projects",
+      "pdf/nav2-algorithms-survey",
+      "pdf/nav2-algorithms-survey"
+     ],
+     "latency_ms": 5.76
+    }
+   ],
+   "hit@1": {
+    "mean": 0.5081967213114754,
+    "ci_low": 0.3770491803278688,
+    "ci_high": 0.6229508196721312
+   },
+   "hit@3": {
+    "mean": 0.7377049180327869,
+    "ci_low": 0.6229508196721312,
+    "ci_high": 0.8360655737704918
+   },
+   "hit@5": {
+    "mean": 0.7704918032786885,
+    "ci_low": 0.6557377049180327,
+    "ci_high": 0.8688524590163934
+   },
+   "hit@10": {
+    "mean": 0.8688524590163934,
+    "ci_low": 0.7868852459016393,
+    "ci_high": 0.9508196721311475
+   },
+   "mrr@10": {
+    "mean": 0.635447567004944,
+    "ci_low": 0.5323054905022119,
+    "ci_high": 0.7303213635180849
+   },
+   "ndcg@10": {
+    "mean": 0.6428102283154086,
+    "ci_low": 0.5526414417289932,
+    "ci_high": 0.7257083149714704
+   },
+   "p@5": {
+    "mean": 0.19016393442622953,
+    "ci_low": 0.15737704918032788,
+    "ci_high": 0.22622950819672133
+   },
+   "latency_ms_mean": 5.9,
+   "latency_ms_p95": 6.6,
+   "hit@5_by_category": {
+    "cli": 0.733,
+    "concept": 0.75,
+    "howto": 0.864,
+    "paper": 0.6,
+    "project": 0.667
+   },
+   "n_questions": 61,
+   "strategy": "section"
+  },
+  {
+   "mode": "hybrid",
+   "per_question": [
+    {
+     "id": "q01",
+     "category": "concept",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Intermediate/About-Domain-ID",
+      "Concepts/Intermediate/About-Domain-ID",
+      "Concepts/Intermediate/About-Domain-ID",
+      "Tutorials/Advanced/Creating-An-RMW-Implementation",
+      "Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment"
+     ],
+     "latency_ms": 11.45
+    },
+    {
+     "id": "q02",
+     "category": "concept",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Intermediate/About-Quality-of-Service-Settings",
+      "Concepts/Intermediate/About-Quality-of-Service-Settings",
+      "Tutorials/Demos/Wait-for-Acknowledgment",
+      "Tutorials/Advanced/FastDDS-Configuration",
+      "pdf/ros2-design-architecture-uses"
+     ],
+     "latency_ms": 7.81
+    },
+    {
+     "id": "q03",
+     "category": "concept",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": null,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Basic/About-Topics",
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics",
+      "Installation/Alternatives/macOS-Development-Setup",
+      "Releases/Alpha-Overview",
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics"
+     ],
+     "latency_ms": 7.18
+    },
+    {
+     "id": "q04",
+     "category": "concept",
+     "rels": [
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 3,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Intermediate/Testing/Testing-Main",
+      "Releases/Release-Jazzy-Jalisco",
+      "Concepts/Basic/About-Services",
+      "How-To-Guides/Sync-Vs-Async",
+      "Concepts/Basic/About-Nodes"
+     ],
+     "latency_ms": 8.17
+    },
+    {
+     "id": "q05",
+     "category": "concept",
+     "rels": [
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 3,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Intermediate/Writing-an-Action-Server-Client/Py",
+      "Tutorials/Intermediate/Creating-an-Action",
+      "Concepts/Basic/About-Actions",
+      "Tutorials/Intermediate/Creating-an-Action",
+      "Tutorials/Intermediate/Creating-an-Action"
+     ],
+     "latency_ms": 6.56
+    },
+    {
+     "id": "q06",
+     "category": "concept",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Basic/About-Topics",
+      "Concepts/Basic/About-Topics",
+      "pdf/ros2-design-architecture-uses",
+      "Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Cpp-Publisher-And-Subscriber",
+      "Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Py-Publisher-And-Subscriber"
+     ],
+     "latency_ms": 7.63
+    },
+    {
+     "id": "q07",
+     "category": "concept",
+     "rels": [
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 2,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters",
+      "Concepts/Basic/About-Parameters",
+      "Releases/Release-Dashing-Diademata",
+      "Releases/Release-Dashing-Diademata",
+      "Tutorials/Beginner-Client-Libraries/Using-Parameters-In-A-Class-Python"
+     ],
+     "latency_ms": 14.32
+    },
+    {
+     "id": "q08",
+     "category": "concept",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Basic/About-Discovery",
+      "Concepts/Basic/About-Nodes",
+      "Tutorials/Advanced/Improved-Dynamic-Discovery",
+      "Tutorials/Beginner-CLI-Tools/Launching-Multiple-Nodes/Launching-Multiple-Nodes",
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes"
+     ],
+     "latency_ms": 11.18
+    },
+    {
+     "id": "q09",
+     "category": "concept",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 6,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "How-To-Guides/Using-callback-groups",
+      "How-To-Guides/Using-callback-groups",
+      "How-To-Guides/Using-callback-groups",
+      "How-To-Guides/Using-callback-groups",
+      "How-To-Guides/Using-callback-groups"
+     ],
+     "latency_ms": 8.21
+    },
+    {
+     "id": "q10",
+     "category": "concept",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 6,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Releases/Release-Lyrical-Luth",
+      "Tutorials/Demos/Logging-and-logger-configuration",
+      "Releases/Release-Galactic-Geochelone",
+      "Tutorials/Beginner-CLI-Tools/Using-Rqt-Console/Using-Rqt-Console",
+      "Tutorials/Demos/Logging-and-logger-configuration"
+     ],
+     "latency_ms": 7.78
+    },
+    {
+     "id": "q11",
+     "category": "concept",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Intermediate/About-Composition",
+      "Tutorials/Intermediate/Composition",
+      "Tutorials/Intermediate/Composition",
+      "Tutorials/Intermediate/Composition",
+      "Tutorials/Intermediate/Composition"
+     ],
+     "latency_ms": 7.73
+    },
+    {
+     "id": "q12",
+     "category": "concept",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Intermediate/About-Tf2",
+      "Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Cpp",
+      "Concepts/Intermediate/About-Tf2",
+      "Tutorials/Intermediate/Tf2/Time-Travel-With-Tf2-Cpp",
+      "Tutorials/Intermediate/Tf2/Tf2-Main"
+     ],
+     "latency_ms": 7.76
+    },
+    {
+     "id": "q13",
+     "category": "concept",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": null,
+     "n_relevant_in_index": 2,
+     "top_docs": [
+      "Installation/Windows-Install-Binary",
+      "Installation/Alternatives/Ubuntu-Install-Binary",
+      "Installation/Ubuntu-Install-Debs",
+      "Installation/Alternatives/Ubuntu-Development-Setup",
+      "Installation/Alternatives/Windows-Development-Setup"
+     ],
+     "latency_ms": 8.02
+    },
+    {
+     "id": "q14",
+     "category": "concept",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Intermediate/About-Topic-Statistics",
+      "Concepts/Basic/Interfaces-Topics-Services-Actions",
+      "Tutorials/Advanced/Topic-Statistics-Tutorial/Topic-Statistics-Tutorial",
+      "Tutorials/Advanced/Topic-Statistics-Tutorial/Topic-Statistics-Tutorial",
+      "Tutorials/Advanced/Topic-Statistics-Tutorial/Topic-Statistics-Tutorial"
+     ],
+     "latency_ms": 7.96
+    },
+    {
+     "id": "q15",
+     "category": "concept",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 5,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes",
+      "Tutorials/Intermediate/Using-Node-Interfaces-Template-Class",
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters",
+      "Tutorials/Advanced/Recording-A-Bag-From-Your-Own-Node-CPP",
+      "Concepts/Basic/About-Nodes"
+     ],
+     "latency_ms": 5.83
+    },
+    {
+     "id": "q16",
+     "category": "concept",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Basic/About-Topics",
+      "Releases/Alpha-Overview",
+      "Concepts/Basic",
+      "Releases/Alpha-Overview",
+      "Releases/Alpha-Overview"
+     ],
+     "latency_ms": 8.09
+    },
+    {
+     "id": "q17",
+     "category": "cli",
+     "rels": [
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 3,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Intermediate/Testing/Integration",
+      "Tutorials/Intermediate/Testing/Integration",
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics",
+      "Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter",
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics"
+     ],
+     "latency_ms": 7.53
+    },
+    {
+     "id": "q18",
+     "category": "cli",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Actions/Understanding-ROS2-Actions",
+      "Tutorials/Intermediate/Writing-an-Action-Server-Client/Py",
+      "Tutorials/Intermediate/Writing-an-Action-Server-Client/Py",
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Actions/Understanding-ROS2-Actions",
+      "Tutorials/Intermediate/Writing-an-Action-Server-Client/Py"
+     ],
+     "latency_ms": 7.72
+    },
+    {
+     "id": "q19",
+     "category": "cli",
+     "rels": [
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 2,
+     "n_relevant_in_index": 2,
+     "top_docs": [
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters",
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters",
+      "How-To-Guides/Node-arguments",
+      "Concepts/Basic/About-Parameters",
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters"
+     ],
+     "latency_ms": 7.18
+    },
+    {
+     "id": "q20",
+     "category": "cli",
+     "rels": [
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 4,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects",
+      "How-To-Guides/Launch-file-different-formats",
+      "How-To-Guides/Migrating-from-ROS1/Migrating-Parameters",
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters",
+      "Releases/Release-Dashing-Diademata"
+     ],
+     "latency_ms": 7.03
+    },
+    {
+     "id": "q21",
+     "category": "cli",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": null,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Intermediate/Launch/Creating-Launch-Files",
+      "Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects",
+      "Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects",
+      "Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects",
+      "Tutorials/Intermediate/Launch/Using-Substitutions"
+     ],
+     "latency_ms": 7.33
+    },
+    {
+     "id": "q22",
+     "category": "cli",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data",
+      "Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data",
+      "Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data",
+      "Tutorials/Advanced/Recording-A-Bag-From-Your-Own-Node-Py",
+      "Releases/Release-Galactic-Geochelone"
+     ],
+     "latency_ms": 8.28
+    },
+    {
+     "id": "q23",
+     "category": "cli",
+     "rels": [
+      true,
+      false,
+      true,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 3,
+     "top_docs": [
+      "Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data",
+      "Tutorials/Advanced/Recording-A-Bag-From-Your-Own-Node-CPP",
+      "Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data",
+      "Tutorials/Advanced/Recording-A-Bag-From-Your-Own-Node-Py",
+      "Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data"
+     ],
+     "latency_ms": 7.77
+    },
+    {
+     "id": "q24",
+     "category": "cli",
+     "rels": [
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 2,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Beginner-Client-Libraries/Getting-Started-With-Ros2doctor",
+      "Tutorials/Beginner-Client-Libraries/Getting-Started-With-Ros2doctor",
+      "Tutorials/Beginner-Client-Libraries/Getting-Started-With-Ros2doctor",
+      "Tutorials/Beginner-Client-Libraries/Getting-Started-With-Ros2doctor",
+      "Tutorials/Beginner-Client-Libraries/Getting-Started-With-Ros2doctor"
+     ],
+     "latency_ms": 8.2
+    },
+    {
+     "id": "q25",
+     "category": "cli",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": null,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Beginner-Client-Libraries/Using-Parameters-In-A-Class-Python",
+      "Tutorials/Intermediate/Monitoring-For-Parameter-Changes-Python",
+      "Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package",
+      "How-To-Guides/Developing-a-ROS-2-Package",
+      "Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Py-Publisher-And-Subscriber"
+     ],
+     "latency_ms": 7.99
+    },
+    {
+     "id": "q26",
+     "category": "cli",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 2,
+     "top_docs": [
+      "Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace",
+      "Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace",
+      "Tutorials/Intermediate/Tf2/Writing-A-Tf2-Listener-Cpp",
+      "Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package",
+      "Tutorials/Intermediate/Tf2/Writing-A-Tf2-Listener-Py"
+     ],
+     "latency_ms": 8.13
+    },
+    {
+     "id": "q27",
+     "category": "cli",
+     "rels": [
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 2,
+     "n_relevant_in_index": 2,
+     "top_docs": [
+      "Concepts/Intermediate/About-Tf2",
+      "Tutorials/Intermediate/Tf2/Introduction-To-Tf2",
+      "Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Cpp",
+      "Tutorials/Intermediate/Tf2/Introduction-To-Tf2",
+      "Concepts/Intermediate/About-Tf2"
+     ],
+     "latency_ms": 7.92
+    },
+    {
+     "id": "q28",
+     "category": "cli",
+     "rels": [
+      true,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 2,
+     "top_docs": [
+      "Tutorials/Intermediate/Tf2/Writing-A-Tf2-Static-Broadcaster-Cpp",
+      "Tutorials/Intermediate/Tf2/Writing-A-Tf2-Static-Broadcaster-Py",
+      "Releases/Release-Humble-Hawksbill",
+      "Tutorials/Intermediate/Tf2/Writing-A-Tf2-Static-Broadcaster-Cpp",
+      "Tutorials/Intermediate/Tf2/Writing-A-Tf2-Static-Broadcaster-Py"
+     ],
+     "latency_ms": 7.89
+    },
+    {
+     "id": "q29",
+     "category": "cli",
+     "rels": [
+      true,
+      false,
+      true,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      true
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 6,
+     "top_docs": [
+      "Tutorials/Intermediate/Composition",
+      "Concepts/Intermediate/About-Composition",
+      "Tutorials/Intermediate/Composition",
+      "Concepts/Intermediate/About-Composition",
+      "Tutorials/Intermediate/Composition"
+     ],
+     "latency_ms": 6.66
+    },
+    {
+     "id": "q30",
+     "category": "cli",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": null,
+     "n_relevant_in_index": 2,
+     "top_docs": [
+      "Tutorials/Demos/Logging-and-logger-configuration",
+      "Tutorials/Demos/Logging-and-logger-configuration",
+      "How-To-Guides/Getting-Backtraces-in-ROS-2",
+      "Tutorials/Intermediate/Tf2/Debugging-Tf2-Problems",
+      "How-To-Guides/Getting-Backtraces-in-ROS-2"
+     ],
+     "latency_ms": 7.3
+    },
+    {
+     "id": "q31",
+     "category": "cli",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Intermediate/Testing/Python",
+      "Tutorials/Intermediate/Testing/Python",
+      "How-To-Guides/Ament-CMake-Python-Documentation",
+      "Tutorials/Intermediate/Testing/Integration",
+      "Tutorials/Intermediate/Testing/Python"
+     ],
+     "latency_ms": 8.06
+    },
+    {
+     "id": "q32",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Beginner-Client-Libraries/Colcon-Tutorial",
+      "How-To-Guides/ROS-2-IDEs",
+      "How-To-Guides/Migrating-from-ROS1/Migrating-Python-Packages",
+      "How-To-Guides/Using-Python-Packages",
+      "Tutorials/Intermediate/URDF/Using-URDF-with-Robot-State-Publisher-py"
+     ],
+     "latency_ms": 8.54
+    },
+    {
+     "id": "q33",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace",
+      "Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace",
+      "Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace",
+      "Tutorials/Beginner-Client-Libraries/Colcon-Tutorial",
+      "Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment"
+     ],
+     "latency_ms": 7.12
+    },
+    {
+     "id": "q34",
+     "category": "howto",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": null,
+     "n_relevant_in_index": 4,
+     "top_docs": [
+      "Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Cpp-Service-And-Client",
+      "Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package",
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes",
+      "How-To-Guides/ROS-2-IDEs",
+      "How-To-Guides/Getting-Backtraces-in-ROS-2"
+     ],
+     "latency_ms": 8.51
+    },
+    {
+     "id": "q35",
+     "category": "howto",
+     "rels": [
+      false,
+      false,
+      true,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 3,
+     "n_relevant_in_index": 3,
+     "top_docs": [
+      "Tutorials/Beginner-Client-Libraries/Custom-ROS2-Interfaces",
+      "Tutorials/Beginner-Client-Libraries/Custom-ROS2-Interfaces",
+      "Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface",
+      "Tutorials/Beginner-Client-Libraries/Custom-ROS2-Interfaces",
+      "Tutorials/Beginner-Client-Libraries/Custom-ROS2-Interfaces"
+     ],
+     "latency_ms": 8.47
+    },
+    {
+     "id": "q36",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 8,
+     "top_docs": [
+      "Tutorials/Intermediate/Monitoring-For-Parameter-Changes-Python",
+      "Tutorials/Intermediate/Monitoring-For-Parameter-Changes-Python",
+      "Tutorials/Intermediate/Monitoring-For-Parameter-Changes-Python",
+      "Tutorials/Intermediate/Monitoring-For-Parameter-Changes-Python",
+      "Tutorials/Intermediate/Monitoring-For-Parameter-Changes-CPP"
+     ],
+     "latency_ms": 7.92
+    },
+    {
+     "id": "q37",
+     "category": "howto",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": null,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Advanced/About-Internal-Interfaces",
+      "Concepts/Intermediate/About-Different-Middleware-Vendors",
+      "Concepts/Intermediate/About-Different-Middleware-Vendors",
+      "Installation/RMW-Implementations/Non-DDS-Implementations",
+      "Concepts/Intermediate/About-Different-Middleware-Vendors"
+     ],
+     "latency_ms": 7.59
+    },
+    {
+     "id": "q38",
+     "category": "howto",
+     "rels": [
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 2,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics",
+      "Tutorials/Advanced/Improved-Dynamic-Discovery",
+      "Concepts/Basic/About-Discovery",
+      "Concepts/Basic/About-Nodes",
+      "Concepts/Basic/About-Command-Line-Tools"
+     ],
+     "latency_ms": 6.95
+    },
+    {
+     "id": "q39",
+     "category": "howto",
+     "rels": [
+      false,
+      true,
+      true,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 2,
+     "n_relevant_in_index": 4,
+     "top_docs": [
+      "How-To-Guides/Using-callback-groups",
+      "How-To-Guides/Sync-Vs-Async",
+      "How-To-Guides/Sync-Vs-Async",
+      "How-To-Guides/Sync-Vs-Async",
+      "How-To-Guides/Using-callback-groups"
+     ],
+     "latency_ms": 7.48
+    },
+    {
+     "id": "q40",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 2,
+     "top_docs": [
+      "How-To-Guides/DDS-tuning",
+      "How-To-Guides/DDS-tuning",
+      "How-To-Guides/DDS-tuning",
+      "How-To-Guides/Configure-ZeroCopy-loaned-messages",
+      "How-To-Guides/DDS-tuning"
+     ],
+     "latency_ms": 8.05
+    },
+    {
+     "id": "q41",
+     "category": "howto",
+     "rels": [
+      false,
+      false,
+      true,
+      true,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true
+     ],
+     "first_relevant_rank": 3,
+     "n_relevant_in_index": 10,
+     "top_docs": [
+      "Tutorials/Advanced/Discovery-Server/Discovery-Server",
+      "Tutorials/Advanced/Discovery-Server/Discovery-Server",
+      "Tutorials/Advanced/Discovery-Server/Discovery-Server",
+      "Tutorials/Advanced/Discovery-Server/Discovery-Server",
+      "Tutorials/Advanced/Discovery-Server/Discovery-Server"
+     ],
+     "latency_ms": 7.91
+    },
+    {
+     "id": "q42",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Installation/RMW-Implementations/Non-DDS-Implementations/Working-with-Zenoh",
+      "Tutorials/Advanced/Improved-Dynamic-Discovery",
+      "Installation/RMW-Implementations/Non-DDS-Implementations",
+      "Tutorials/Advanced/Creating-An-RMW-Implementation",
+      "Installation/RMW-Implementations/Non-DDS-Implementations/Working-with-Zenoh"
+     ],
+     "latency_ms": 8.42
+    },
+    {
+     "id": "q43",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 2,
+     "top_docs": [
+      "Tutorials/Advanced/Security/Introducing-ros2-security",
+      "Concepts/Intermediate/About-Security",
+      "Tutorials/Advanced/Creating-An-RMW-Implementation",
+      "Tutorials/Advanced/Security/Examine-Traffic",
+      "Tutorials/Advanced/Security/Introducing-ros2-security"
+     ],
+     "latency_ms": 7.29
+    },
+    {
+     "id": "q44",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Advanced/Security/Introducing-ros2-security",
+      "Tutorials/Advanced/Security/The-Keystore",
+      "Tutorials/Advanced/Security/The-Keystore",
+      "Tutorials/Advanced/Security/Introducing-ros2-security",
+      "Tutorials/Advanced/Security/Introducing-ros2-security"
+     ],
+     "latency_ms": 7.38
+    },
+    {
+     "id": "q45",
+     "category": "howto",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      true,
+      false
+     ],
+     "first_relevant_rank": 8,
+     "n_relevant_in_index": 3,
+     "top_docs": [
+      "Tutorials/Demos/Intra-Process-Communication",
+      "Tutorials/Demos/Intra-Process-Communication",
+      "Tutorials/Demos/Intra-Process-Communication",
+      "pdf/ros2-design-architecture-uses",
+      "Tutorials/Demos/Intra-Process-Communication"
+     ],
+     "latency_ms": 6.9
+    },
+    {
+     "id": "q46",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Demos/Real-Time-Programming",
+      "Concepts/Intermediate/About-Executors",
+      "Tutorials/Demos/Real-Time-Programming",
+      "Tutorials/Demos/Real-Time-Programming",
+      "Tutorials/Demos/Real-Time-Programming"
+     ],
+     "latency_ms": 7.3
+    },
+    {
+     "id": "q47",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF",
+      "Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF",
+      "Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF",
+      "Tutorials/Intermediate/URDF/Building-a-Visual-Robot-Model-with-URDF-from-Scratch",
+      "Tutorials/Intermediate/URDF/Building-a-Visual-Robot-Model-with-URDF-from-Scratch"
+     ],
+     "latency_ms": 8.04
+    },
+    {
+     "id": "q48",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Intermediate/URDF/Using-Xacro-to-Clean-Up-a-URDF-File",
+      "Tutorials/Intermediate/URDF/Using-Xacro-to-Clean-Up-a-URDF-File",
+      "Tutorials/Intermediate/URDF/Using-Xacro-to-Clean-Up-a-URDF-File",
+      "Tutorials/Intermediate/URDF/Using-URDF-with-Robot-State-Publisher-cpp",
+      "Tutorials/Intermediate/URDF/Using-URDF-with-Robot-State-Publisher-cpp"
+     ],
+     "latency_ms": 7.04
+    },
+    {
+     "id": "q49",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "How-To-Guides/Launch-file-different-formats",
+      "Tutorials/Intermediate/Launch/Creating-Launch-Files",
+      "Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects",
+      "How-To-Guides/Launch-file-different-formats",
+      "Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects"
+     ],
+     "latency_ms": 6.41
+    },
+    {
+     "id": "q50",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Intermediate/Launch/Using-Event-Handlers",
+      "Tutorials/Intermediate/Launch/Creating-Launch-Files",
+      "Tutorials/Intermediate/Testing/Integration",
+      "Tutorials/Advanced/Simulators/Webots/Simulation-Reset-Handler",
+      "Tutorials/Intermediate/Testing/Integration"
+     ],
+     "latency_ms": 7.31
+    },
+    {
+     "id": "q51",
+     "category": "howto",
+     "rels": [
+      false,
+      true,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 2,
+     "n_relevant_in_index": 2,
+     "top_docs": [
+      "How-To-Guides/Overriding-QoS-Policies-For-Recording-And-Playback",
+      "How-To-Guides/Overriding-QoS-Policies-For-Recording-And-Playback",
+      "Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data",
+      "How-To-Guides/Overriding-QoS-Policies-For-Recording-And-Playback",
+      "Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data"
+     ],
+     "latency_ms": 7.15
+    },
+    {
+     "id": "q52",
+     "category": "howto",
+     "rels": [
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 2,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Intermediate/Tf2/Quaternion-Fundamentals",
+      "Tutorials/Intermediate/Tf2/Quaternion-Fundamentals",
+      "Tutorials/Intermediate/Tf2/Quaternion-Fundamentals",
+      "Tutorials/Intermediate/Tf2/Quaternion-Fundamentals",
+      "Tutorials/Intermediate/Tf2/Quaternion-Fundamentals"
+     ],
+     "latency_ms": 6.15
+    },
+    {
+     "id": "q53",
+     "category": "howto",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 5,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "How-To-Guides/Getting-Backtraces-in-ROS-2",
+      "How-To-Guides/Getting-Backtraces-in-ROS-2",
+      "How-To-Guides/Getting-Backtraces-in-ROS-2",
+      "How-To-Guides/Getting-Backtraces-in-ROS-2",
+      "How-To-Guides/Getting-Backtraces-in-ROS-2"
+     ],
+     "latency_ms": 7.57
+    },
+    {
+     "id": "q54",
+     "category": "project",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true
+     ],
+     "first_relevant_rank": 10,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "About-ROS",
+      "Releases",
+      "Releases",
+      "The-ROS2-Project/Release-Schedule",
+      "Releases"
+     ],
+     "latency_ms": 6.96
+    },
+    {
+     "id": "q55",
+     "category": "project",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 6,
+     "n_relevant_in_index": 2,
+     "top_docs": [
+      "The-ROS2-Project/Contributing/Windows-Tips-and-Tricks",
+      "Installation/Alternatives/Windows-Development-Setup",
+      "Releases/Beta2-Overview",
+      "Concepts/Intermediate/About-Domain-ID",
+      "Releases/Beta3-Overview"
+     ],
+     "latency_ms": 7.95
+    },
+    {
+     "id": "q56",
+     "category": "project",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "How-To-Guides/Releasing/First-Time-Release",
+      "How-To-Guides/Releasing/Releasing-a-Package",
+      "How-To-Guides/Releasing/Release-Track",
+      "How-To-Guides/Releasing/Index-Your-Packages",
+      "How-To-Guides/Core-maintainer-guide"
+     ],
+     "latency_ms": 7.49
+    },
+    {
+     "id": "q57",
+     "category": "paper",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": null,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "pdf/marathon2-nav2",
+      "pdf/marathon2-nav2",
+      "pdf/marathon2-nav2",
+      "pdf/marathon2-nav2",
+      "pdf/marathon2-nav2"
+     ],
+     "latency_ms": 6.95
+    },
+    {
+     "id": "q58",
+     "category": "paper",
+     "rels": [
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 3,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "pdf/marathon2-nav2",
+      "pdf/marathon2-nav2",
+      "pdf/marathon2-nav2",
+      "pdf/marathon2-nav2",
+      "pdf/marathon2-nav2"
+     ],
+     "latency_ms": 6.89
+    },
+    {
+     "id": "q59",
+     "category": "paper",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 5,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Intermediate/About-Different-Middleware-Vendors",
+      "pdf/ros2-design-architecture-uses",
+      "Releases/Alpha-Overview",
+      "pdf/ros2-design-architecture-uses",
+      "pdf/ros2-design-architecture-uses"
+     ],
+     "latency_ms": 7.34
+    },
+    {
+     "id": "q60",
+     "category": "paper",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "pdf/nav2-algorithms-survey",
+      "pdf/nav2-algorithms-survey",
+      "pdf/marathon2-nav2",
+      "pdf/nav2-algorithms-survey",
+      "pdf/marathon2-nav2"
+     ],
+     "latency_ms": 7.48
+    },
+    {
+     "id": "q61",
+     "category": "paper",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "pdf/nav2-algorithms-survey",
+      "pdf/nav2-algorithms-survey",
+      "pdf/nav2-algorithms-survey",
+      "pdf/nav2-algorithms-survey",
+      "pdf/nav2-algorithms-survey"
+     ],
+     "latency_ms": 6.74
+    }
+   ],
+   "hit@1": {
+    "mean": 0.4918032786885246,
+    "ci_low": 0.36065573770491804,
+    "ci_high": 0.6065573770491803
+   },
+   "hit@3": {
+    "mean": 0.7213114754098361,
+    "ci_low": 0.6065573770491803,
+    "ci_high": 0.8360655737704918
+   },
+   "hit@5": {
+    "mean": 0.7868852459016393,
+    "ci_low": 0.6721311475409836,
+    "ci_high": 0.8852459016393442
+   },
+   "hit@10": {
+    "mean": 0.8688524590163934,
+    "ci_low": 0.7704918032786885,
+    "ci_high": 0.9508196721311475
+   },
+   "mrr@10": {
+    "mean": 0.615983606557377,
+    "ci_low": 0.5127049180327868,
+    "ci_high": 0.7106557377049181
+   },
+   "ndcg@10": {
+    "mean": 0.6292382132213586,
+    "ci_low": 0.5348720159721307,
+    "ci_high": 0.7134747169995919
+   },
+   "p@5": {
+    "mean": 0.19344262295081968,
+    "ci_low": 0.15737704918032785,
+    "ci_high": 0.22950819672131148
+   },
+   "latency_ms_mean": 7.8,
+   "latency_ms_p95": 8.5,
+   "hit@5_by_category": {
+    "cli": 0.8,
+    "concept": 0.75,
+    "howto": 0.864,
+    "paper": 0.8,
+    "project": 0.333
+   },
+   "n_questions": 61,
+   "strategy": "section"
+  },
+  {
+   "mode": "hybrid_rerank",
+   "per_question": [
+    {
+     "id": "q01",
+     "category": "concept",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Intermediate/About-Domain-ID",
+      "Concepts/Intermediate/About-Domain-ID",
+      "Concepts/Intermediate/About-Domain-ID",
+      "Concepts/Intermediate/About-Domain-ID",
+      "Tutorials/Intermediate/Testing/Integration"
+     ],
+     "latency_ms": 154.48
+    },
+    {
+     "id": "q02",
+     "category": "concept",
+     "rels": [
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 2,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Intermediate/About-Quality-of-Service-Settings",
+      "Concepts/Intermediate/About-Quality-of-Service-Settings",
+      "pdf/ros2-design-architecture-uses",
+      "Concepts/Intermediate/About-Quality-of-Service-Settings",
+      "How-To-Guides/Overriding-QoS-Policies-For-Recording-And-Playback"
+     ],
+     "latency_ms": 181.55
+    },
+    {
+     "id": "q03",
+     "category": "concept",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": null,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Installation/Alternatives/macOS-Development-Setup",
+      "Concepts/Basic/About-Topics",
+      "Releases/Alpha-Overview",
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics",
+      "Tutorials/Demos/Rosbag-with-ROS1-Bridge"
+     ],
+     "latency_ms": 176.4
+    },
+    {
+     "id": "q04",
+     "category": "concept",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Basic/About-Services",
+      "Concepts/Basic/About-Actions",
+      "Concepts/Basic/About-Interfaces",
+      "Concepts/Basic/About-Nodes",
+      "Concepts/Basic/About-Services"
+     ],
+     "latency_ms": 176.7
+    },
+    {
+     "id": "q05",
+     "category": "concept",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Basic/About-Actions",
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Actions/Understanding-ROS2-Actions",
+      "Tutorials/Intermediate/Writing-an-Action-Server-Client/Py",
+      "Tutorials/Intermediate/Creating-an-Action",
+      "How-To-Guides/Migrating-from-ROS1/Migrating-Scripts"
+     ],
+     "latency_ms": 173.53
+    },
+    {
+     "id": "q06",
+     "category": "concept",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Basic/About-Topics",
+      "pdf/ros2-design-architecture-uses",
+      "Concepts/Basic/About-Topics",
+      "Concepts/Basic/About-Topics",
+      "Tutorials/Demos/Intra-Process-Communication"
+     ],
+     "latency_ms": 176.44
+    },
+    {
+     "id": "q07",
+     "category": "concept",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Basic/About-Parameters",
+      "Releases/Release-Dashing-Diademata",
+      "Releases/Release-Dashing-Diademata",
+      "Concepts/Basic/About-Parameters",
+      "Releases/Release-Dashing-Diademata"
+     ],
+     "latency_ms": 176.08
+    },
+    {
+     "id": "q08",
+     "category": "concept",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Basic/About-Discovery",
+      "Tutorials/Advanced/Improved-Dynamic-Discovery",
+      "Concepts/Basic/About-Nodes",
+      "Releases/Release-Galactic-Geochelone",
+      "Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Cpp-Publisher-And-Subscriber"
+     ],
+     "latency_ms": 153.21
+    },
+    {
+     "id": "q09",
+     "category": "concept",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 5,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "How-To-Guides/Using-callback-groups",
+      "How-To-Guides/Using-callback-groups",
+      "How-To-Guides/Using-callback-groups",
+      "How-To-Guides/Using-callback-groups",
+      "Concepts/Intermediate/About-Executors"
+     ],
+     "latency_ms": 175.66
+    },
+    {
+     "id": "q10",
+     "category": "concept",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Intermediate/About-Logging",
+      "Releases/Release-Lyrical-Luth",
+      "Tutorials/Beginner-CLI-Tools/Using-Rqt-Console/Using-Rqt-Console",
+      "Tutorials/Demos/Logging-and-logger-configuration",
+      "Concepts/Intermediate/About-Logging"
+     ],
+     "latency_ms": 176.1
+    },
+    {
+     "id": "q11",
+     "category": "concept",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Intermediate/About-Composition",
+      "Tutorials/Intermediate/Composition",
+      "Tutorials/Intermediate/Composition",
+      "Tutorials/Intermediate/Composition",
+      "Concepts/Intermediate/About-Composition"
+     ],
+     "latency_ms": 176.13
+    },
+    {
+     "id": "q12",
+     "category": "concept",
+     "rels": [
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 2,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Cpp",
+      "Concepts/Intermediate/About-Tf2",
+      "Concepts/Intermediate/About-Tf2",
+      "Tutorials/Intermediate/Tf2/Time-Travel-With-Tf2-Cpp",
+      "Tutorials/Intermediate/Tf2/Writing-A-Tf2-Listener-Py"
+     ],
+     "latency_ms": 174.94
+    },
+    {
+     "id": "q13",
+     "category": "concept",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true
+     ],
+     "first_relevant_rank": 10,
+     "n_relevant_in_index": 2,
+     "top_docs": [
+      "Installation/Ubuntu-Install-Debs",
+      "Installation/Alternatives/Ubuntu-Install-Binary",
+      "Installation/Windows-Install-Binary",
+      "Installation/Alternatives/RHEL-Install-Binary",
+      "Installation/RHEL-Install-RPMs"
+     ],
+     "latency_ms": 153.23
+    },
+    {
+     "id": "q14",
+     "category": "concept",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Intermediate/About-Topic-Statistics",
+      "Concepts/Basic/Interfaces-Topics-Services-Actions",
+      "Tutorials/Advanced/Topic-Statistics-Tutorial/Topic-Statistics-Tutorial",
+      "Tutorials/Advanced/Topic-Statistics-Tutorial/Topic-Statistics-Tutorial",
+      "Concepts/Intermediate/About-Topic-Statistics"
+     ],
+     "latency_ms": 175.7
+    },
+    {
+     "id": "q15",
+     "category": "concept",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Basic/About-Nodes",
+      "pdf/ros2-design-architecture-uses",
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes",
+      "Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Cpp-Publisher-And-Subscriber",
+      "Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Cpp-Service-And-Client"
+     ],
+     "latency_ms": 174.25
+    },
+    {
+     "id": "q16",
+     "category": "concept",
+     "rels": [
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 2,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Basic",
+      "Concepts/Basic/About-Topics",
+      "Concepts/Basic/About-Topics",
+      "Releases/Alpha-Overview",
+      "Releases/Alpha-Overview"
+     ],
+     "latency_ms": 176.24
+    },
+    {
+     "id": "q17",
+     "category": "cli",
+     "rels": [
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 3,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Intermediate/Testing/Integration",
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics",
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics",
+      "Tutorials/Intermediate/Testing/Integration",
+      "Tutorials/Intermediate/Tf2/Writing-A-Tf2-Broadcaster-Cpp"
+     ],
+     "latency_ms": 176.61
+    },
+    {
+     "id": "q18",
+     "category": "cli",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Actions/Understanding-ROS2-Actions",
+      "Tutorials/Intermediate/Writing-an-Action-Server-Client/Py",
+      "Tutorials/Intermediate/Writing-an-Action-Server-Client/Py",
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Actions/Understanding-ROS2-Actions",
+      "Tutorials/Intermediate/Creating-an-Action"
+     ],
+     "latency_ms": 176.91
+    },
+    {
+     "id": "q19",
+     "category": "cli",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 2,
+     "top_docs": [
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters",
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters",
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters",
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters",
+      "Concepts/Basic/About-Parameters"
+     ],
+     "latency_ms": 175.17
+    },
+    {
+     "id": "q20",
+     "category": "cli",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters",
+      "How-To-Guides/Using-ros2-param",
+      "How-To-Guides/Migrating-from-ROS1/Migrating-Parameters",
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters",
+      "How-To-Guides/Using-ros2-param"
+     ],
+     "latency_ms": 177.15
+    },
+    {
+     "id": "q21",
+     "category": "cli",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": null,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Intermediate/Launch/Creating-Launch-Files",
+      "Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects",
+      "Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects",
+      "Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim",
+      "Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes"
+     ],
+     "latency_ms": 173.96
+    },
+    {
+     "id": "q22",
+     "category": "cli",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data",
+      "Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data",
+      "Tutorials/Advanced/Recording-A-Bag-From-Your-Own-Node-Py",
+      "Releases/Release-Galactic-Geochelone",
+      "Tutorials/Advanced/Recording-A-Bag-From-Your-Own-Node-CPP"
+     ],
+     "latency_ms": 176.21
+    },
+    {
+     "id": "q23",
+     "category": "cli",
+     "rels": [
+      true,
+      true,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 3,
+     "top_docs": [
+      "Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data",
+      "Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data",
+      "Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data",
+      "Tutorials/Advanced/Recording-A-Bag-From-Your-Own-Node-Py",
+      "Tutorials/Advanced/Recording-A-Bag-From-Your-Own-Node-CPP"
+     ],
+     "latency_ms": 175.89
+    },
+    {
+     "id": "q24",
+     "category": "cli",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 7,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Beginner-Client-Libraries/Getting-Started-With-Ros2doctor",
+      "Tutorials/Beginner-Client-Libraries/Getting-Started-With-Ros2doctor",
+      "Tutorials/Beginner-Client-Libraries/Getting-Started-With-Ros2doctor",
+      "How-To-Guides/Working-with-multiple-RMW-implementations",
+      "Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment"
+     ],
+     "latency_ms": 177.37
+    },
+    {
+     "id": "q25",
+     "category": "cli",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 7,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Intermediate/Monitoring-For-Parameter-Changes-Python",
+      "Tutorials/Beginner-Client-Libraries/Using-Parameters-In-A-Class-Python",
+      "Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Py-Service-And-Client",
+      "Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Py-Publisher-And-Subscriber",
+      "Tutorials/Advanced/Recording-A-Bag-From-Your-Own-Node-Py"
+     ],
+     "latency_ms": 177.32
+    },
+    {
+     "id": "q26",
+     "category": "cli",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 2,
+     "top_docs": [
+      "Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace",
+      "Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package",
+      "How-To-Guides/Developing-a-ROS-2-Package",
+      "Tutorials/Intermediate/Tf2/Adding-A-Frame-Cpp",
+      "Tutorials/Intermediate/Rosdep"
+     ],
+     "latency_ms": 177.49
+    },
+    {
+     "id": "q27",
+     "category": "cli",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false
+     ],
+     "first_relevant_rank": 8,
+     "n_relevant_in_index": 2,
+     "top_docs": [
+      "Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Cpp",
+      "Concepts/Intermediate/About-Tf2",
+      "Concepts/Intermediate/About-Tf2",
+      "Concepts/Intermediate/About-Tf2",
+      "Tutorials/Intermediate/Tf2/Adding-A-Frame-Py"
+     ],
+     "latency_ms": 175.43
+    },
+    {
+     "id": "q28",
+     "category": "cli",
+     "rels": [
+      true,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 2,
+     "top_docs": [
+      "Tutorials/Intermediate/Tf2/Writing-A-Tf2-Static-Broadcaster-Cpp",
+      "Tutorials/Intermediate/Tf2/Writing-A-Tf2-Static-Broadcaster-Py",
+      "Tutorials/Intermediate/Tf2/Writing-A-Tf2-Static-Broadcaster-Cpp",
+      "Tutorials/Intermediate/Tf2/Writing-A-Tf2-Static-Broadcaster-Py",
+      "Releases/Release-Humble-Hawksbill"
+     ],
+     "latency_ms": 177.88
+    },
+    {
+     "id": "q29",
+     "category": "cli",
+     "rels": [
+      false,
+      true,
+      true,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 2,
+     "n_relevant_in_index": 6,
+     "top_docs": [
+      "Concepts/Intermediate/About-Composition",
+      "Tutorials/Intermediate/Composition",
+      "Tutorials/Intermediate/Composition",
+      "How-To-Guides/Launching-composable-nodes",
+      "Concepts/Intermediate/About-Composition"
+     ],
+     "latency_ms": 176.57
+    },
+    {
+     "id": "q30",
+     "category": "cli",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true
+     ],
+     "first_relevant_rank": 10,
+     "n_relevant_in_index": 2,
+     "top_docs": [
+      "How-To-Guides/ROS-2-IDEs",
+      "How-To-Guides/Getting-Backtraces-in-ROS-2",
+      "How-To-Guides/Getting-Backtraces-in-ROS-2",
+      "Tutorials/Demos/Logging-and-logger-configuration",
+      "Tutorials/Demos/Logging-and-logger-configuration"
+     ],
+     "latency_ms": 178.05
+    },
+    {
+     "id": "q31",
+     "category": "cli",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Intermediate/Testing/Python",
+      "How-To-Guides/Ament-CMake-Python-Documentation",
+      "The-ROS2-Project/Contributing/Contributing-To-ROS-2-Documentation",
+      "Tutorials/Intermediate/Testing/Python",
+      "Tutorials/Intermediate/Testing/Python"
+     ],
+     "latency_ms": 175.71
+    },
+    {
+     "id": "q32",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Beginner-Client-Libraries/Colcon-Tutorial",
+      "How-To-Guides/ROS-2-IDEs",
+      "Tutorials/Intermediate/URDF/Using-URDF-with-Robot-State-Publisher-py",
+      "Installation/Alternatives/macOS-Development-Setup",
+      "How-To-Guides/Using-Python-Packages"
+     ],
+     "latency_ms": 140.62
+    },
+    {
+     "id": "q33",
+     "category": "howto",
+     "rels": [
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 3,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace",
+      "Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment",
+      "Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace",
+      "Tutorials/Beginner-Client-Libraries/Colcon-Tutorial",
+      "Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace"
+     ],
+     "latency_ms": 175.58
+    },
+    {
+     "id": "q34",
+     "category": "howto",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 7,
+     "n_relevant_in_index": 4,
+     "top_docs": [
+      "Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Cpp-Service-And-Client",
+      "Tutorials/Intermediate/Tf2/Writing-A-Tf2-Listener-Cpp",
+      "How-To-Guides/ROS-2-IDEs",
+      "Tutorials/Intermediate/Tf2/Writing-A-Tf2-Static-Broadcaster-Cpp",
+      "Tutorials/Intermediate/Tf2/Writing-A-Tf2-Broadcaster-Cpp"
+     ],
+     "latency_ms": 177.48
+    },
+    {
+     "id": "q35",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 3,
+     "top_docs": [
+      "Tutorials/Beginner-Client-Libraries/Custom-ROS2-Interfaces",
+      "Tutorials/Beginner-Client-Libraries/Custom-ROS2-Interfaces",
+      "Tutorials/Beginner-Client-Libraries/Custom-ROS2-Interfaces",
+      "How-To-Guides/Migrating-from-ROS1/Migrating-CPP-Packages",
+      "Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface"
+     ],
+     "latency_ms": 176.08
+    },
+    {
+     "id": "q36",
+     "category": "howto",
+     "rels": [
+      true,
+      true,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      true,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 8,
+     "top_docs": [
+      "Tutorials/Intermediate/Monitoring-For-Parameter-Changes-Python",
+      "Tutorials/Intermediate/Monitoring-For-Parameter-Changes-Python",
+      "Tutorials/Intermediate/Monitoring-For-Parameter-Changes-Python",
+      "Tutorials/Intermediate/Monitoring-For-Parameter-Changes-Python",
+      "Concepts/Basic/About-Parameters"
+     ],
+     "latency_ms": 177.52
+    },
+    {
+     "id": "q37",
+     "category": "howto",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": null,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Installation/RMW-Implementations/DDS-Implementations",
+      "Installation/RMW-Implementations/Non-DDS-Implementations",
+      "Concepts/Intermediate/About-Domain-ID",
+      "Concepts/Intermediate/About-Different-Middleware-Vendors",
+      "Tutorials/Advanced/Discovery-Server/Discovery-Server"
+     ],
+     "latency_ms": 176.45
+    },
+    {
+     "id": "q38",
+     "category": "howto",
+     "rels": [
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 2,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Basic/About-Discovery",
+      "Tutorials/Advanced/Improved-Dynamic-Discovery",
+      "Concepts/Basic/About-Command-Line-Tools",
+      "Tutorials/Advanced/Discovery-Server/Discovery-Server",
+      "Releases/Release-Iron-Irwini"
+     ],
+     "latency_ms": 175.39
+    },
+    {
+     "id": "q39",
+     "category": "howto",
+     "rels": [
+      false,
+      false,
+      true,
+      true,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false
+     ],
+     "first_relevant_rank": 3,
+     "n_relevant_in_index": 4,
+     "top_docs": [
+      "How-To-Guides/Using-callback-groups",
+      "How-To-Guides/Using-callback-groups",
+      "How-To-Guides/Sync-Vs-Async",
+      "How-To-Guides/Sync-Vs-Async",
+      "How-To-Guides/Sync-Vs-Async"
+     ],
+     "latency_ms": 179.06
+    },
+    {
+     "id": "q40",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 2,
+     "top_docs": [
+      "How-To-Guides/DDS-tuning",
+      "How-To-Guides/DDS-tuning",
+      "How-To-Guides/DDS-tuning",
+      "How-To-Guides/Working-with-multiple-RMW-implementations",
+      "Releases/Release-Crystal-Clemmys"
+     ],
+     "latency_ms": 180.19
+    },
+    {
+     "id": "q41",
+     "category": "howto",
+     "rels": [
+      true,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      true
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 10,
+     "top_docs": [
+      "Tutorials/Advanced/Discovery-Server/Discovery-Server",
+      "Tutorials/Advanced/Discovery-Server/Discovery-Server",
+      "Tutorials/Advanced/Discovery-Server/Discovery-Server",
+      "Tutorials/Advanced/Discovery-Server/Discovery-Server",
+      "Tutorials/Advanced/Discovery-Server/Discovery-Server"
+     ],
+     "latency_ms": 178.18
+    },
+    {
+     "id": "q42",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Installation/RMW-Implementations/Non-DDS-Implementations/Working-with-Zenoh",
+      "Tutorials/Advanced/Creating-An-RMW-Implementation",
+      "Installation/RMW-Implementations/Non-DDS-Implementations",
+      "Tutorials/Advanced/Improved-Dynamic-Discovery",
+      "Tutorials/Advanced/Creating-An-RMW-Implementation"
+     ],
+     "latency_ms": 178.32
+    },
+    {
+     "id": "q43",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 2,
+     "top_docs": [
+      "Tutorials/Advanced/Security/Introducing-ros2-security",
+      "Concepts/Intermediate/About-Security",
+      "Tutorials/Advanced/Security/Examine-Traffic",
+      "Tutorials/Advanced/Creating-An-RMW-Implementation",
+      "Tutorials/Advanced/Security/Introducing-ros2-security"
+     ],
+     "latency_ms": 166.51
+    },
+    {
+     "id": "q44",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Advanced/Security/Introducing-ros2-security",
+      "Tutorials/Advanced/Security/The-Keystore",
+      "Tutorials/Advanced/Security/Introducing-ros2-security",
+      "Tutorials/Advanced/Security/Deployment-Guidelines",
+      "Tutorials/Advanced/Security/The-Keystore"
+     ],
+     "latency_ms": 177.58
+    },
+    {
+     "id": "q45",
+     "category": "howto",
+     "rels": [
+      false,
+      false,
+      false,
+      true,
+      false,
+      true,
+      true,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 4,
+     "n_relevant_in_index": 3,
+     "top_docs": [
+      "Tutorials/Demos/Intra-Process-Communication",
+      "Tutorials/Demos/Intra-Process-Communication",
+      "Releases/Release-Jazzy-Jalisco",
+      "Tutorials/Demos/Intra-Process-Communication",
+      "Tutorials/Demos/Intra-Process-Communication"
+     ],
+     "latency_ms": 176.72
+    },
+    {
+     "id": "q46",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Demos/Real-Time-Programming",
+      "Concepts/Intermediate/About-Executors",
+      "Tutorials/Demos/Real-Time-Programming",
+      "Concepts/Intermediate/About-Executors",
+      "Tutorials/Advanced/Allocator-Template-Tutorial"
+     ],
+     "latency_ms": 175.81
+    },
+    {
+     "id": "q47",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF",
+      "Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF",
+      "Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF",
+      "Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF",
+      "Tutorials/Intermediate/URDF/Building-a-Visual-Robot-Model-with-URDF-from-Scratch"
+     ],
+     "latency_ms": 178.27
+    },
+    {
+     "id": "q48",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Intermediate/URDF/Using-Xacro-to-Clean-Up-a-URDF-File",
+      "Tutorials/Intermediate/URDF/Using-Xacro-to-Clean-Up-a-URDF-File",
+      "Tutorials/Intermediate/URDF/Using-Xacro-to-Clean-Up-a-URDF-File",
+      "Tutorials/Intermediate/URDF/Building-a-Visual-Robot-Model-with-URDF-from-Scratch",
+      "Tutorials/Intermediate/URDF/URDF-Main"
+     ],
+     "latency_ms": 174.82
+    },
+    {
+     "id": "q49",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "How-To-Guides/Launch-file-different-formats",
+      "How-To-Guides/Launch-file-different-formats",
+      "Tutorials/Intermediate/Tf2/Writing-A-Tf2-Broadcaster-Py",
+      "Tutorials/Intermediate/Tf2/Writing-A-Tf2-Broadcaster-Cpp",
+      "How-To-Guides/Migrating-from-ROS1/Migrating-Launch-Files"
+     ],
+     "latency_ms": 173.21
+    },
+    {
+     "id": "q50",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Intermediate/Launch/Using-Event-Handlers",
+      "Tutorials/Advanced/Simulators/Webots/Simulation-Reset-Handler",
+      "Tutorials/Intermediate/Testing/Integration",
+      "Tutorials/Advanced/Simulators/Webots/Simulation-Reset-Handler",
+      "Tutorials/Intermediate/Launch/Creating-Launch-Files"
+     ],
+     "latency_ms": 176.96
+    },
+    {
+     "id": "q51",
+     "category": "howto",
+     "rels": [
+      true,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 2,
+     "top_docs": [
+      "How-To-Guides/Overriding-QoS-Policies-For-Recording-And-Playback",
+      "How-To-Guides/Overriding-QoS-Policies-For-Recording-And-Playback",
+      "How-To-Guides/Overriding-QoS-Policies-For-Recording-And-Playback",
+      "Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data",
+      "Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data"
+     ],
+     "latency_ms": 165.56
+    },
+    {
+     "id": "q52",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Tutorials/Intermediate/Tf2/Quaternion-Fundamentals",
+      "Tutorials/Intermediate/Tf2/Quaternion-Fundamentals",
+      "Tutorials/Intermediate/Tf2/Quaternion-Fundamentals",
+      "Tutorials/Intermediate/Tf2/Quaternion-Fundamentals",
+      "Tutorials/Intermediate/Tf2/Quaternion-Fundamentals"
+     ],
+     "latency_ms": 175.03
+    },
+    {
+     "id": "q53",
+     "category": "howto",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "How-To-Guides/Getting-Backtraces-in-ROS-2",
+      "How-To-Guides/Getting-Backtraces-in-ROS-2",
+      "How-To-Guides/Getting-Backtraces-in-ROS-2",
+      "How-To-Guides/Getting-Backtraces-in-ROS-2",
+      "How-To-Guides/Getting-Backtraces-in-ROS-2"
+     ],
+     "latency_ms": 176.8
+    },
+    {
+     "id": "q54",
+     "category": "project",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "The-ROS2-Project/Release-Schedule",
+      "The-ROS2-Project/Release-Schedule",
+      "Releases",
+      "The-ROS2-Project/Release-Schedule",
+      "About-ROS"
+     ],
+     "latency_ms": 157.14
+    },
+    {
+     "id": "q55",
+     "category": "project",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false
+     ],
+     "first_relevant_rank": 8,
+     "n_relevant_in_index": 2,
+     "top_docs": [
+      "The-ROS2-Project/Contributing/Windows-Tips-and-Tricks",
+      "Installation/Alternatives/Windows-Development-Setup",
+      "How-To-Guides/Ament-CMake-Documentation",
+      "How-To-Guides/Installation-Troubleshooting",
+      "Releases/Beta2-Overview"
+     ],
+     "latency_ms": 177.77
+    },
+    {
+     "id": "q56",
+     "category": "project",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "How-To-Guides/Releasing/First-Time-Release",
+      "How-To-Guides/Releasing/Releasing-a-Package",
+      "How-To-Guides/Releasing/Subsequent-Releases",
+      "How-To-Guides/Core-maintainer-guide",
+      "Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package"
+     ],
+     "latency_ms": 177.68
+    },
+    {
+     "id": "q57",
+     "category": "paper",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 6,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "pdf/marathon2-nav2",
+      "pdf/marathon2-nav2",
+      "pdf/marathon2-nav2",
+      "pdf/marathon2-nav2",
+      "pdf/marathon2-nav2"
+     ],
+     "latency_ms": 176.98
+    },
+    {
+     "id": "q58",
+     "category": "paper",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "pdf/marathon2-nav2",
+      "pdf/marathon2-nav2",
+      "pdf/marathon2-nav2",
+      "pdf/marathon2-nav2",
+      "pdf/marathon2-nav2"
+     ],
+     "latency_ms": 169.06
+    },
+    {
+     "id": "q59",
+     "category": "paper",
+     "rels": [
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 3,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "Concepts/Intermediate/About-Different-Middleware-Vendors",
+      "Concepts/Intermediate/About-Domain-ID",
+      "pdf/ros2-design-architecture-uses",
+      "Concepts/Intermediate/About-Security",
+      "pdf/ros2-design-architecture-uses"
+     ],
+     "latency_ms": 155.96
+    },
+    {
+     "id": "q60",
+     "category": "paper",
+     "rels": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 1,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "pdf/nav2-algorithms-survey",
+      "pdf/nav2-algorithms-survey",
+      "How-To-Guides/Getting-Backtraces-in-ROS-2",
+      "pdf/marathon2-nav2",
+      "Tutorials/Advanced/Simulators/Webots/Installation-Windows"
+     ],
+     "latency_ms": 180.61
+    },
+    {
+     "id": "q61",
+     "category": "paper",
+     "rels": [
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false
+     ],
+     "first_relevant_rank": 5,
+     "n_relevant_in_index": 1,
+     "top_docs": [
+      "pdf/nav2-algorithms-survey",
+      "pdf/nav2-algorithms-survey",
+      "pdf/nav2-algorithms-survey",
+      "pdf/marathon2-nav2",
+      "pdf/nav2-algorithms-survey"
+     ],
+     "latency_ms": 176.99
+    }
+   ],
+   "hit@1": {
+    "mean": 0.6229508196721312,
+    "ci_low": 0.4918032786885246,
+    "ci_high": 0.7377049180327869
+   },
+   "hit@3": {
+    "mean": 0.7704918032786885,
+    "ci_low": 0.6557377049180327,
+    "ci_high": 0.8688524590163934
+   },
+   "hit@5": {
+    "mean": 0.819672131147541,
+    "ci_low": 0.7213114754098361,
+    "ci_high": 0.9180327868852459
+   },
+   "hit@10": {
+    "mean": 0.9508196721311475,
+    "ci_low": 0.8852459016393442,
+    "ci_high": 1.0
+   },
+   "mrr@10": {
+    "mean": 0.7135831381733022,
+    "ci_low": 0.6160421545667447,
+    "ci_high": 0.8066159250585481
+   },
+   "ndcg@10": {
+    "mean": 0.729679687666564,
+    "ci_low": 0.6449671234850792,
+    "ci_high": 0.8095368353497628
+   },
+   "p@5": {
+    "mean": 0.20655737704918034,
+    "ci_low": 0.17377049180327872,
+    "ci_high": 0.24262295081967214
+   },
+   "latency_ms_mean": 173.8,
+   "latency_ms_p95": 179.1,
+   "hit@5_by_category": {
+    "cli": 0.667,
+    "concept": 0.875,
+    "howto": 0.909,
+    "paper": 0.8,
+    "project": 0.667
+   },
+   "n_questions": 61,
+   "strategy": "section"
+  }
+ ]
+}
