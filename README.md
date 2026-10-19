@@ -50,7 +50,7 @@ The evaluation set is 61 hand-written answerable questions (CLI, concepts, how-t
 | section + heading prefix | hybrid (RRF) | 0.426 | 0.787 | 0.902 | 0.574 | 8 |
 | **section + heading prefix** | **hybrid + rerank (default)** | **0.590** | **0.803** | 0.885 | **0.690** | 159 |
 
-Hit@k is the share of questions with a relevant chunk in the top k, and latency is retrieval only, on an Apple M5. The other seven rows are in the `results_*.json` files.
+Hit@k is the share of questions with a relevant chunk in the top k, and latency is retrieval only, on an Apple M5. The full 12-row grid is in [`reports/retrieval/table_main.md`](reports/retrieval/table_main.md).
 
 The reranker is what puts the right passage first: on section chunks it raises Hit@1 from 0.426 to 0.590 and MRR from 0.574 to 0.690 (paired bootstrap p = 0.02), while Hit@5 barely moves, so it reorders candidates already in the list. Section chunking beats fixed windows by 0.111 MRR only with the reranker (p = 0.007); without it no chunker difference is significant. Even the best setup misses 7 of 61 questions in the top 10.
 
